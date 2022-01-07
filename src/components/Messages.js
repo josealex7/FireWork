@@ -1,38 +1,38 @@
 import React from 'react';
-import { ContainerPrincipal, Buttons } from "../styles/Messages.elements";
+import { ContainerPrincipal, ContainerUno, InputContainer, InputSearch, BtnContainer, Buttons, ContainerDos, ImgContainer, Img, ContainerText, P } from "../styles/Messages.elements";
 
 const Messages = () => {
     return (
         <ContainerPrincipal>
-            <div>
-                <div>
-                    <input type="text" placeholder="Buscar"/>
-                </div>
+            <ContainerUno>
+                <InputContainer>
+                    <InputSearch id="outlined-basic" label="Buscar" variant="outlined" />
+                </InputContainer>
 
-                <div>
-                    <Buttons type="button">
+                <BtnContainer>
+                    <Buttons variant="contained" type="button">
                         Todos
                     </Buttons>
 
-                    <Buttons type="button">
+                    <Buttons variant="contained" type="button" size="small">
                         Proyectos en curso
                     </Buttons>
 
-                    <Buttons type="button">
+                    <Buttons variant="contained" type="button">
                         Mi equipo
                     </Buttons>
-                </div>
-            </div>
+                </BtnContainer>
+            </ContainerUno>
 
-            <div>
-                <div>
-                    <img src="https://res.cloudinary.com/app-firework1/image/upload/v1640726611/imagenes/undraw_manage_chats_re_0yoj_dshfcj.svg" alt="imagen" />
-                </div>
+            <ContainerDos>
+                <ImgContainer>
+                    <Img src="https://res.cloudinary.com/app-firework1/image/upload/v1640726611/imagenes/undraw_manage_chats_re_0yoj_dshfcj.svg" alt="imagen" />
+                </ImgContainer>
 
-                <div>
-                    <p>Accede a todos tus mensajes, propuestas y miembros de tu equipo desde un solo lugar</p>
-                </div>
-            </div>
+                <ContainerText>
+                    <P>Accede a todos tus mensajes, propuestas y miembros de tu equipo desde un solo lugar.</P>
+                </ContainerText>
+            </ContainerDos>
         </ContainerPrincipal>
     )
 }

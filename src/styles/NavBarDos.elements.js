@@ -2,12 +2,13 @@ import styled from "styled-components";
 
 export const ContainerPrincipal = styled.div`
   width: 100%;
-  height: 100px;
+  height: 80px;
   background-color: #fff;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  border-bottom: 1px solid rgba(95, 35, 100, 0.1);
   @media screen and (max-width: 590px) {
     width: 100%;
     height: 100px;

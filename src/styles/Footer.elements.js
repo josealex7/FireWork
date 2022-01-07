@@ -48,7 +48,7 @@ export const ContainerTexto = styled.div`
   justify-content: center;
   align-items: center;
   @media screen and (max-width: 850px) {
-    margin-top: 0px;
+    margin-top: 30px;
     width: 320px;
     display: flex;
     flex-direction: column;

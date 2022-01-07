@@ -14,7 +14,7 @@ const Footer = () => {
         <ContainerPrincipal>
             
                 <LogoContainer>
-                    <ImgLogo src="https://res.cloudinary.com/app-firework1/image/upload/v1640728186/logo/Logo2_dew9tx.png" alt="logo" />
+                    <ImgLogo src="https://res.cloudinary.com/app-firework1/image/upload/v1640799731/logo/Logo2_csgze7.png" alt="logo" />
                 </LogoContainer>
 
                 <ContainerTexto>
