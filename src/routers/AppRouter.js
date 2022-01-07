@@ -10,6 +10,9 @@ import { DashboardRoutes } from "./DashboardRoutes";
 import { PrivateRoute } from "./PrivateRoute";
 import { PublicRoute } from "./PublicRoute";
 import { getAuth,onAuthStateChanged } from "firebase/auth";
+import Footer from '../components/Footer';
+import NavBarDos from '../components/NavBarDos';
+import HomeUno from "../components/HomeUno";
 
 export default function AppRouter() {
 
@@ -44,10 +47,20 @@ if(checking){
   return (
     <Router>
         <Routes>
+
+        <Route path="/homeuno" element={
+                    <PublicRoute isAuthenticated={isLoggedIn}>
+                        <NavBarDos/>
+                        <HomeUno/>
+                        <Footer/>
+                    </PublicRoute>
+                } />
          
         <Route path="/login" element={
                     <PublicRoute isAuthenticated={isLoggedIn}>
+                        <NavBarDos/>   
                         <Login/> 
+                        <Footer/>
                     </PublicRoute>
                 } />
 
@@ -55,7 +68,9 @@ if(checking){
 
                 <Route path="/registro" element={
                     <PublicRoute isAuthenticated={isLoggedIn}>
+                        <NavBarDos/>
                         <Registro/>
+                        <Footer/>
                     </PublicRoute>
                 } />
 

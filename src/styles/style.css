@@ -15,5 +15,11 @@
 }
 
 Form{
-   margin-left: 40%;
+   margin: auto;
 }
+
+.links{
+    text-decoration: none;
+    color: black;
+}
+

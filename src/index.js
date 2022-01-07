@@ -4,6 +4,7 @@ import './styles/style.css';
 import {RegistroApp} from './RegistroApp';
 import {Provider} from 'react-redux';
 import {store} from './store/store';
+import { ThemeProvider } from '@mui/material'
 
 ReactDOM.render(
   <Provider store={store}>
