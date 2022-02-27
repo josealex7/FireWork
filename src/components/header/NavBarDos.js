@@ -1,5 +1,6 @@
 import React from 'react';
-import { ContainerPrincipal, LogoContainer, ContainerButtons, Button1, Button2, ImgLogo } from "../styles/NavBarDos.elements";
+import { ContainerPrincipal, LogoContainer, ContainerButtons, Button1, Button2, ImgLogo } from "../../styles/NavBarDos.elements";
+import { Link } from "react-router-dom";
 
 const NavBarDos = () => {
     return (
@@ -10,11 +11,15 @@ const NavBarDos = () => {
 
                 <ContainerButtons>
                     <Button1>
-                        Ingresa
+                        <Link to="/" className='link'>
+                            Ingresa
+                        </Link>
                     </Button1>
 
                     <Button2>
-                        Registrate
+                        <Link to="/registro" className='links'>
+                            Registrate
+                        </Link>
                     </Button2>
                 </ContainerButtons>
         </ContainerPrincipal>

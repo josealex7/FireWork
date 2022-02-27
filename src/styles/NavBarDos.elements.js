@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const ContainerPrincipal = styled.div`
   width: 100%;
-  height: 80px;
+  height: 100px;
   background-color: #fff;
   display: flex;
   flex-direction: row;
@@ -52,7 +52,7 @@ export const ContainerButtons = styled.div`
 export const Button1 = styled.button`
   border: none;
   border-radius: 10px;
-  color: #000000;
+  color: #fff;
   font-family: Arial;
   font-style: normal;
   font-weight: normal;

@@ -1,0 +1,29 @@
+#formBasicName {
+    width: 20vw;
+}
+
+#formBasicEmail {
+    width: 20vw;
+}
+
+#formBasicPassword {
+    width: 20vw;
+}
+
+#formBasicRepitPassword {
+    width: 20vw;
+}
+
+Form {
+    margin: auto;
+}
+
+.link {
+    text-decoration: none;
+    color: black;
+}
+
+.links {
+    text-decoration: none;
+    color: #fff;
+}

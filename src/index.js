@@ -1,11 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './styles/index.css';
-import App from './containers/App';
+import './styles/style.css';
+import {RegistroApp} from './RegistroApp';
+import {Provider} from 'react-redux';
+import {store} from './store/store';
+// import { ThemeProvider } from '@mui/material'
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <Provider store={store}>
+    <RegistroApp />
+  </Provider>,
   document.getElementById('root')
 );

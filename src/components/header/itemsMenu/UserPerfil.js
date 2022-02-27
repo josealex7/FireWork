@@ -1,10 +1,9 @@
 import React from 'react';
-import Box from '@mui/material/Box';
-import Toolbar from '@mui/material/Toolbar';
+import { Link, useNavigate  } from "react-router-dom";
+import { useDispatch } from 'react-redux';
+import { logout } from '../../../actions/actionLogin';
+// Material ui
 import IconButton from '@mui/material/IconButton';
-import Badge from '@mui/material/Badge';
-import MailIcon from '@mui/icons-material/Mail';
-import NotificationsIcon from '@mui/icons-material/Notifications';
 import Settings from '@mui/icons-material/Settings';
 import Logout from '@mui/icons-material/Logout';
 import Avatar from '@mui/material/Avatar';
@@ -12,10 +11,8 @@ import Menu from '@mui/material/Menu';
 import Divider from '@mui/material/Divider';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import MenuItem from '@mui/material/MenuItem';
-import { NavBarContainer, LogoContainer, ImgLogo, MenuItems, ContainerSearch } from "../styles/NavBarUno.elements";
-import SearchWords from './SearchWords';
 
-const NavBarUno = () => {
+const UserPerfil = () => {
   
   const [auth, setAuth] = React.useState(true);
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -28,56 +25,18 @@ const NavBarUno = () => {
     setAnchorEl(null);
   };
 
+  // Logout
+  const navigate = useNavigate();
+
+  const dispatch = useDispatch();
+
+  const handleLogout = () => {
+    dispatch(logout())
+    navigate("/login")
+  }
+
   return (
-    <Box sx={{ flexGrow: 1 }}>
-      <NavBarContainer position="static">
-        <Toolbar>
-
-          {/* Logo */}
-          
-            <LogoContainer>
-              <ImgLogo src="https://res.cloudinary.com/app-firework1/image/upload/v1640799702/logo/logo2_yk6jcs.svg" alt="..."/>
-            </LogoContainer>
-            
-          {/* Items menu */}
-          <MenuItems>Inicio</MenuItems>
-          <MenuItems>Busca trabajo</MenuItems>
-          <MenuItems>Mis proyectos</MenuItems>
-          <MenuItems>Mis finanzas</MenuItems>
-
-
-          <ContainerSearch>
-          {/* Search */}
-          <SearchWords />
-          </ContainerSearch>
-          
-          {/* Menu messages */}
-          <IconButton
-                size="large"
-                aria-label="account of current user"
-                aria-controls="menu-appbar"
-                aria-haspopup="true"
-                // onClick={}
-                color="inherit"
-              >
-                <Badge badgeContent={4} color="error">
-                    <MailIcon />
-                </Badge>
-          </IconButton>
-
-          {/* Menu notifications */}
-          <IconButton
-                size="large"
-                aria-label="account of current user"
-                aria-controls="menu-appbar"
-                aria-haspopup="true"
-                // onClick={}
-                color="inherit"
-              >
-                <Badge badgeContent={2} color="error">
-                    <NotificationsIcon />
-                </Badge>
-          </IconButton>
+    <div>
 
           {/* Menu perfil */}
 
@@ -122,7 +81,9 @@ const NavBarUno = () => {
                     Settings
                 </MenuItem>
 
-                <MenuItem>
+                <MenuItem
+                  onClick={() => handleLogout()}
+                >
                     <ListItemIcon>
                         <Logout fontSize="small" />
                     </ListItemIcon>
@@ -132,12 +93,8 @@ const NavBarUno = () => {
               </Menu>
             </div>
             )}
-            
-
-
-        </Toolbar>
-      </NavBarContainer>
-    </Box>
+    </div>
   )
 };
-export default NavBarUno;
+
+export default UserPerfil;

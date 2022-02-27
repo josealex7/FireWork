@@ -1,13 +1,14 @@
 import styled from "styled-components";
 
-export const ContainerPrincipal = styled.div`
+export const ContainerPrincipal = styled.footer`
   width: 100%;
   height: auto;
   background-color: #fff;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  margin-bottom:40px;
   @media screen and (max-width: 850px) {
     width: 100%;
     height: auto;
@@ -24,7 +25,6 @@ export const LogoContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-left: 60px;
   @media screen and (max-width: 850px) {
     margin-bottom: 0px;
     margin-left: 0px;
@@ -32,8 +32,9 @@ export const LogoContainer = styled.div`
 `
 
 export const ImgLogo = styled.img`
-  width: 110px;
+  width: 130px;
   height: auto;
+  margin-bottom: 10px;
   @media screen and (max-width: 850px) {
     margin-bottom: 0px;
     width: 120px;
@@ -56,15 +57,14 @@ export const ContainerTexto = styled.div`
   }
 `
 
-export const P = styled.p`
+export const P = styled.small`
   color: #686D76;
-  font-family: Lora;
+  /* font-family: Lora; */
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
   line-height: 32px;
   text-align: center;
-  margin-right: 10px;
   @media screen and (max-width: 850px) {
     font-size: 16px;
     line-height: 32px;
