@@ -14,10 +14,10 @@ export const DashboardRoutes = () => {
             <div>
                 <NavBarUno />
                     <Routes>
-                        <Route path="/" element={<HomeTwo />} />
+                        <Route path="/home" element={<HomeTwo />} />
                         <Route path='/notificaciones' element={<Notifications/>} />
                         <Route path='/mensajes' element={<Messages/>} />
-                        <Route path='*' element={<Navigate to="/" />} />
+                        <Route path='*' element={<Navigate to="/home" />} />
                     </Routes>
                 <Footer />
             </div>

@@ -6,12 +6,14 @@ const NavBarDos = () => {
     return (
         <ContainerPrincipal>
                 <LogoContainer>
-                    <ImgLogo src="https://res.cloudinary.com/app-firework1/image/upload/v1640799731/logo/Logo2_csgze7.png" alt="logo" />
+                    <Link to="/homeuno" className='link'>
+                        <ImgLogo src="https://res.cloudinary.com/app-firework1/image/upload/v1640799731/logo/Logo2_csgze7.png" alt="logo" />
+                    </Link>
                 </LogoContainer>
 
                 <ContainerButtons>
                     <Button1>
-                        <Link to="/" className='link'>
+                        <Link to="/login" className='link'>
                             Ingresa
                         </Link>
                     </Button1>

@@ -12,6 +12,7 @@ import { PublicRoute } from "./PublicRoute";
 import { getAuth,onAuthStateChanged } from "firebase/auth";
 import NavBarDos from "../components/header/NavBarDos";
 import Footer from '../components/footer/Footer';
+import Loading from '../components/loading/Loading';
 import HomeOne from "../pages/HomeOne";
 import Spinner from "../components/accesorios/Spinner";
 
@@ -47,7 +48,15 @@ if(checking){
 
   return (
     <Router>
-        <Routes>
+      <Routes>
+
+        <Route path="/" element={ <Loading /> } />
+        
+        {/* <Route path="/" element={
+                    <PublicRoute isAuthenticated={isLoggedIn}>
+                        <Loading />
+                    </PublicRoute>
+                } /> */}
 
         <Route path="/homeuno" element={
                     <PublicRoute isAuthenticated={isLoggedIn}>

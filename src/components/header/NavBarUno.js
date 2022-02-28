@@ -17,7 +17,7 @@ const NavBarUno = () => {
         <Toolbar>
 
           {/* Logo */}
-          <Link to="/" className="links">
+          <Link to="/home" className="links">
             <LogoContainer>
               <ImgLogo src="https://res.cloudinary.com/app-firework1/image/upload/v1645671615/logo/logofirework-white_hqzzrs.svg" alt="logo"/>
             </LogoContainer>

@@ -1,0 +1,15 @@
+.Loading-header {
+    background-color: #fff;
+    background-image: url('https://res.cloudinary.com/app-firework1/image/upload/v1640799731/logo/Logo2_csgze7.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 400px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-size: calc(10px + 2vmin);
+    color: #000000;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}

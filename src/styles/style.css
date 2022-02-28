@@ -1,3 +1,8 @@
+* {
+    margin: 0px;
+    font-family: Arial;
+}
+
 #formBasicName {
     width: 20vw;
 }

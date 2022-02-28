@@ -1,12 +1,16 @@
 import React from 'react';
-import CarouselOne from '../components/home/CarouselOne';
 import HeaderHome from '../components/home/HeaderHome';
+import AboutFirework from '../components/home/itemsHomeUno/AboutFirework';
+import InviteRegister from '../components/home/itemsHomeUno/InviteRegister';
+import CarouselOne from '../components/home/CarouselOne';
 
 const HomeOne = () => {
     return (
         <div>
             <HeaderHome />
+            <AboutFirework />
             <CarouselOne />
+            <InviteRegister />
         </div>
     )
 }
