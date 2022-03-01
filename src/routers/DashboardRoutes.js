@@ -9,6 +9,7 @@ import Notifications from '../pages/Notifications';
 import Messages from '../pages/Messages';
 import Test from '../pages/Test';
 import QuizOne from '../components/quicez/quiz-one/QuizOne';
+import QuizTwo from '../components/quicez/quiz-two/QuizTwo';
 
 export const DashboardRoutes = () => {
     return ( 
@@ -21,6 +22,7 @@ export const DashboardRoutes = () => {
                         <Route path='/notificaciones' element={<Notifications/>} />
                         <Route path='/mensajes' element={<Messages/>} />
                         <Route path='/prueba-1' element={<QuizOne />} />
+                        <Route path='/prueba-2' element={<QuizTwo />} />
                         <Route path='*' element={<Navigate to="/home" />} />
                     </Routes>
                 <Footer />
