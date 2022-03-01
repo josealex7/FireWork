@@ -1,6 +1,6 @@
 import React from 'react';
 import Carousel from 'react-elastic-carousel';
-import { FirstContainer, TitleCarouselTwo, TitleCard, ImgCarouselTwo } from '../../styles/Carousel.elements';
+import { FirstContainer, TitleCarouselTwo, TitleCard, ImgCarouselTwo } from '../../../styles/Carousel.elements';
 
 const CarouselOne = () => {
     return (

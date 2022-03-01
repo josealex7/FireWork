@@ -1,9 +1,12 @@
 import React from 'react';
+import Services from '../components/home/itemsHomeDos/Services';
+import InviteToTest from '../components/home/itemsHomeDos/InviteToTest';
 
 const HomeTwo = () => {
     return (
-        <div>
-            <h1>En construccion...</h1>
+        <div className='container-home-two'>
+            <Services />
+            <InviteToTest />
         </div>
     )
 }

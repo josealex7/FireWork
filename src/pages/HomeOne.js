@@ -1,8 +1,8 @@
 import React from 'react';
-import HeaderHome from '../components/home/HeaderHome';
+import HeaderHome from '../components/home/itemsHomeUno/HeaderHome';
 import AboutFirework from '../components/home/itemsHomeUno/AboutFirework';
+import CarouselOne from '../components/home/itemsHomeUno/CarouselOne';
 import InviteRegister from '../components/home/itemsHomeUno/InviteRegister';
-import CarouselOne from '../components/home/CarouselOne';
 
 const HomeOne = () => {
     return (

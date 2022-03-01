@@ -13,7 +13,7 @@ const ItemsMenu = () => {
     <ItemsContainer>
         
         {/* Boton 0 */}
-        <Link to="/" className="links">
+        <Link to="/home" className="links">
             <Button
                 id="basic-button"
                 style={{color: '#fff'}}

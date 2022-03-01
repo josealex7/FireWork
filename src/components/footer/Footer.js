@@ -30,7 +30,7 @@ const Footer = () => {
 
                 <ContainerTexto>
                     <P>
-                        © 2021 | FireWork - Todos los derechos reservados
+                        © 2022 | FireWork - Todos los derechos reservados
                     </P>
                 </ContainerTexto>
 

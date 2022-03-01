@@ -1,5 +1,5 @@
 import React from 'react';
-import { FirstContainer, ContainerLogoImg, LogoImg, Subtitle, SubtitleSpan } from '../../styles/HeaderHome.elements';
+import { FirstContainer, ContainerLogoImg, LogoImg, Subtitle, SubtitleSpan } from '../../../styles/HeaderHome.elements';
 
 const HeaderHome = () => {
     return (
