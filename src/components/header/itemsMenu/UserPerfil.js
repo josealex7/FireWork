@@ -11,6 +11,8 @@ import Menu from '@mui/material/Menu';
 import Divider from '@mui/material/Divider';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import MenuItem from '@mui/material/MenuItem';
+// Css
+import './UserPerfil.css'
 
 const UserPerfil = () => {
   
@@ -68,7 +70,11 @@ const UserPerfil = () => {
                 open={Boolean(anchorEl)}
                 onClose={handleClose}
               >
-                <MenuItem onClick={handleClose}> Mi perfil</MenuItem>
+                  <Link to="/perfil" className='linkSinEstilos'>
+                    <MenuItem onClick={handleClose}>
+                      Mi perfil
+                    </MenuItem>
+                  </Link>
                 <Divider />
                 <MenuItem onClick={handleClose}>Publicar proyecto</MenuItem>
 
