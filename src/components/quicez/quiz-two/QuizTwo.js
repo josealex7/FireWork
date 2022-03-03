@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import questions from './questionsOne';
-import './stylesQuizOne.css';
+import questions from './questionsTwo';
+import '../quiz-one/stylesQuizOne.css';
 
-const QuizOne = () => {
+const QuizTwo = () => {
 
     const [currentQuestion, setCurrentQuestion] = useState(0);
     const [score, setScore] = useState(0);
@@ -41,7 +41,7 @@ const QuizOne = () => {
     if (isFinished)
         return (
             <div className="container-quiz-one">
-                <h1 className='title-quiz'>HTML</h1>
+                <h1 className='title-quiz'>JavaScript</h1>
 
                 <main className="container-quiz-finish">
                     <div className="quiz-finish">
@@ -73,7 +73,7 @@ const QuizOne = () => {
     if (answersShown)
         return (
             <div className="container-quiz-one">
-                <h1 className='title-quiz'>HTML</h1>
+                <h1 className='title-quiz'>JavaScript</h1>
 
                 <main className="container-quiz">
                     <div className="left">
@@ -117,7 +117,7 @@ const QuizOne = () => {
 
     return (
         <div className="container-quiz-one">
-            <h1 className='title-quiz'>HTML</h1>
+            <h1 className='title-quiz'>JavaScript</h1>
 
             <div className='container-quiz'>
                 <div className='left'>
@@ -166,4 +166,4 @@ const QuizOne = () => {
     )
 };
 
-export default QuizOne;
+export default QuizTwo;

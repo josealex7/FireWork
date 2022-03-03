@@ -30,9 +30,11 @@ const Test = () => {
                             <p className="text-test">Responde las preguntas de selección múltiple, si obtienes un puntaje mayor o igual al 80% recibirás una insignia de conocimiento.</p>
                         </div>
                     
-                        <button className="btn-take-test">
-                            Iniciar prueba
-                        </button>
+                        <Link to="/prueba-2" className='link'>
+                            <button className="btn-take-test">
+                                Iniciar prueba
+                            </button>
+                        </Link>
                     </div>
                 </div>
             </div>
