@@ -5,7 +5,7 @@ import { ItemsContainer } from '../../../styles/NavBarUno.elements';
 import Button from '@mui/material/Button';
 import ItemMenuOne from './ItemMenuOne';
 import ItemMenuTwo from './ItemMenuTwo';
-import ItemMenuThree from './ItemMenuThree';
+// import ItemMenuThree from './ItemMenuThree';
 
 const ItemsMenu = () => {
 
@@ -29,7 +29,17 @@ const ItemsMenu = () => {
         <ItemMenuTwo />
         
         {/* Boton 3 */}
-        <ItemMenuThree />
+        {/* <ItemMenuThree /> */}
+        
+        {/* Boton 4 */}
+        <Link to="/about" className="links">
+            <Button
+                id="basic-button"
+                style={{color: '#fff'}}
+            >
+                Sobre FireWork
+            </Button>
+        </Link>
           
     </ItemsContainer>
   )

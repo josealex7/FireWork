@@ -1,0 +1,178 @@
+/* FILTROS ---------------------------------------------------------------------------------- */
+.first-container-filter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 350px;
+    height: auto;
+
+    background: #f1f1f1;
+    border: 1px solid #f1f1f1;
+    border-radius: 4px;
+    padding: 20px;
+}
+
+
+
+/* TODOS ------------------------------------------------------------------------------------ */
+.first-container-all {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+
+    margin-bottom: 60px;
+}
+
+.container-regresar-all {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: start;
+
+    position: absolute;
+    margin-top: 30px;
+    border: none;
+    background: #fff;
+    margin-left: 50px;
+    font-size: 14px;
+    padding: 3px 10px;
+}
+
+.container-regresar-all:hover {
+    cursor: pointer;
+}
+
+.container-icon-regresar-all {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-right: 10px;
+}
+
+.regresar-all {
+    font-weight: bold;
+    color: #000000;
+}
+
+.container-second-all {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: center;
+    margin: 80px 0px 50px 60px;
+}
+
+.container-filter-in-all {
+    margin-right: 50px;
+}
+
+.container-all-cards {
+    width: 800px;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 100px));
+    grid-auto-rows: 380px;
+    column-gap: 20px;
+    row-gap: 5px;
+    justify-content: center;
+}
+
+.card-all-projects {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+
+    width: 240px;
+    height: 360px;
+
+    border: 1px solid #f1f1f1;
+    border-radius: 2px;
+}
+
+.card-part-one {
+    width: 240px;
+    height: 320px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    margin-bottom: 20px;
+
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.container-banner-all-projects {
+    display: flex;
+    align-items: start;
+    justify-content: start;
+
+    width: 100%;
+}
+
+.banner-all-projects {
+    width: 240px;
+    height: 180px;
+    object-fit: cover;
+
+    margin-bottom: 20px;
+}
+
+.container-title-card-all {
+    width: 240px;
+}
+
+.title-card-all {
+    padding: 0px 20px;
+    font-weight: bold;
+}
+
+.card-part-two {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: start;
+    margin-bottom: 10px;
+}
+
+.btn-fav-project-all {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: none;
+    background: none;
+
+    color: gray;
+    font-size: 18px;
+
+    /* margin-left: 10px; */
+    margin-right: 30px;
+}
+
+.btn-fav-project-all:hover {
+    cursor: pointer;
+}
+
+.container-pago-all {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: center;
+}
+
+.info-pago-oferta-card-all {
+    font-size: 14px;
+    font-weight: bold;
+    color: gray;
+}
+
+.precio-oferta-card-all {
+    font-size: 18px;
+    font-weight: bold;
+    color: #000000;
+}

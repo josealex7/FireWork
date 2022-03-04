@@ -3,3 +3,19 @@ export const types = {
     logout: 'logout',
     register: 'register'
 }
+
+export const typesProyectos = {
+    register: 'register proyecto',
+    list: 'list proyecto',
+    delete: 'delete proyecto',
+    search: 'search proyecto',
+    detail: 'detail proyecto',
+}
+
+export const typesServices = {
+    register: 'register service',
+    list: 'list service',
+    delete: 'delete service',
+    search: 'search service',
+    detail: 'detail servicio',
+}

@@ -27,7 +27,7 @@ export const ImgLogo = styled.img`
 `
 
 export const ContainerSearch = styled.div`
-  margin-left: 220px;
+  margin-left: 300px;
   display: flex;
   align-items: start;
   justify-content: start;

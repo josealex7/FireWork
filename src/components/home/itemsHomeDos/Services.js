@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import './stylesHomeTwo.css';
 
 const Services = () => {
@@ -14,24 +15,28 @@ const Services = () => {
                             <p className="text-services-two">¡Comienza a generar ingresos!</p>
                         </div>
                     
-                        <button className="btn-service">
-                            Publicar servicios
-                        </button>
+                        <Link to="/register-service" className='link'>
+                            <button className="btn-service">
+                                Publicar servicios
+                            </button>
+                        </Link>
                     </div>
                 </div>
 
                 <div className="cards-services-two">
                     <div className="white-capa">
-                        <h3 className="title-card-service">¿Buscas un servicio?</h3>
+                        <h3 className="title-card-service">¿Buscas un experto?</h3>
 
                         <div className="container-text-services">
                             <p className="text-services-one">Expertos en toda Colombia, están dispuestos a realizar tus proyectos.</p>
                             <p className="text-services-two">¡Comienza ahora!</p>
                         </div>
                     
-                        <button className="btn-service">
-                            Ver servicios
-                        </button>
+                        <Link to="/register-proyect" className='link'>
+                            <button className="btn-service">
+                                Publicar proyecto
+                            </button>
+                        </Link>
                     </div>
                 </div>
             </div>

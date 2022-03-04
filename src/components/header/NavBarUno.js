@@ -5,8 +5,8 @@ import Toolbar from '@mui/material/Toolbar';
 import { NavBarContainer, LogoContainer, ImgLogo, ContainerSearch } from "../../styles/NavBarUno.elements";
 import SearchWords from './itemsMenu/SearchWords';
 import ItemsMenu from './itemsMenu/ItemsMenu';
-import MessagesNav from './itemsMenu/MessagesNav';
-import NotificationsNav from './itemsMenu/Notifications';
+//import MessagesNav from './itemsMenu/MessagesNav';
+//import NotificationsNav from './itemsMenu/Notifications';
 import UserPerfil from './itemsMenu/UserPerfil';
 
 const NavBarUno = () => {
@@ -33,10 +33,10 @@ const NavBarUno = () => {
           </ContainerSearch>
           
           {/* Menu messages */}
-          <MessagesNav />
+          {/* <MessagesNav /> */}
 
           {/* Menu notifications */}
-          <NotificationsNav />
+          {/* <NotificationsNav /> */}
 
           {/* Perfil Usuario */}
           <UserPerfil />

@@ -42,8 +42,12 @@ const ItemMenuOne = () => {
                 'aria-labelledby': 'basic-button',
             }}
         >
-            <MenuItem onClick={handleClose}>Busca proyecto</MenuItem>
-            <MenuItem onClick={handleClose}>Proyectos con mis habilidades</MenuItem>
+            <Link to="/buscar-trabajo" className="link">
+                <MenuItem onClick={handleClose}>Encuentra proyectos</MenuItem>
+            </Link>
+            <Link to="/buscar-servicio" className="link">
+                <MenuItem onClick={handleClose}>Encuentra servicios</MenuItem>
+            </Link>
             <MenuItem onClick={handleClose}>Mis clientes favoritos</MenuItem>
         </Menu>
         

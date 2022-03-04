@@ -1,0 +1,139 @@
+.first-container-register-proyect {
+    margin-bottom: 60px;
+    margin-top: 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+.container-regresar-projects {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+    margin-top: -20px;
+    border: none;
+    background: #fff;
+    margin-left: -635px;
+    font-size: 14px;
+    padding: 3px 10px;
+}
+
+.container-regresar-projects:hover {
+    cursor: pointer;
+}
+
+.container-icon-regresar-projects {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-right: 10px;
+}
+
+.regresar-projects {
+    font-weight: bold;
+    color: #000000;
+}
+
+.title-container-register-proyect {
+    margin-bottom: 20px;
+}
+
+.form-container-register-proyect {
+    width: 100%;
+}
+
+.container-base-register-proyect {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 60px;
+}
+
+.container-divider {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: start;
+}
+
+.img-agregada {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    font-weight: bold;
+
+    margin-top: 20px;
+
+    width: 280px;
+    height: 70px;
+    background: #5c7bea4b;
+}
+
+.divider-zero {
+    margin-right: 100px;
+}
+
+.text--register-proyect {
+    font-size: 20px;
+    font-weight: bold;
+
+    margin-bottom: 20px;
+}
+
+.btn-register-proyect {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    background: #3D56B2;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-family: Arial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    text-align: center;
+    padding: 10px;
+
+    margin-top: 20px;
+}
+
+.btn-register-proyect:hover {
+    background: #5C7AEA;
+    transition: 0.5s all ease;
+    cursor: pointer;
+}
+
+.container-icon-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-left: 10px;
+}
+
+.textarea-register {
+    font-family: inherit;
+    resize: none;
+}
+
+.logo-firework-register-proyect {
+    width: 200px;
+    margin-bottom: 20px;
+}
+
+.container-see-list-register-proyect {
+    margin-top: 40px;
+}

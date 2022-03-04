@@ -34,7 +34,6 @@ export default function AppRouter() {
 
         setChecking(false)
     })
-
  
 }, [setIsLoggedIn,setChecking])
 

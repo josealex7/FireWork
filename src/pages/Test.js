@@ -1,12 +1,25 @@
 import React from 'react';
 import { Link } from "react-router-dom";
+import { FaArrowLeft } from "react-icons/fa";
 import '../components/quicez/stylesQuicez.css';
 
 const Test = () => {
     return (
         <div className='first-container-test'>
+
+            <Link to="/home" >
+                <button className="container-regresar-quizes">
+                    <div className='container-icon-regresar-quizes'>
+                        <FaArrowLeft />
+                    </div>
+                    <div>
+                        <p className='regresar-quizes'>Volver al Inicio</p>
+                    </div> 
+                </button>
+            </Link>
+
             <div className="container-cards">
-                <div className="cards-test">
+                <div className="cards-test-one">
                     <div className="white-capa-test">
                         <h3 className="title-card-test">Prueba de HTML</h3>
 
@@ -22,7 +35,7 @@ const Test = () => {
                     </div>
                 </div>
 
-                <div className="cards-test">
+                <div className="cards-test-two">
                     <div className="white-capa-test">
                         <h3 className="title-card-test">Prueba de JavaScript</h3>
 
