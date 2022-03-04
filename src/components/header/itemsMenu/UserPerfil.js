@@ -1,10 +1,10 @@
 import React from 'react';
-import { Link, useNavigate  } from "react-router-dom";
-import { useDispatch } from 'react-redux';
+import { Link, useNavigate } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
 import { logout } from '../../../actions/actionLogin';
 // Material ui
 import IconButton from '@mui/material/IconButton';
-import Settings from '@mui/icons-material/Settings';
+//import Settings from '@mui/icons-material/Settings';
 import Logout from '@mui/icons-material/Logout';
 import Avatar from '@mui/material/Avatar';
 import Menu from '@mui/material/Menu';
@@ -13,8 +13,11 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import MenuItem from '@mui/material/MenuItem';
 // Css
 import './UserPerfil.css'
+import User from '../../../hooks/User';
 
 const UserPerfil = () => {
+
+  const useUser = User();
   
   const [auth, setAuth] = React.useState(true);
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -52,7 +55,7 @@ const UserPerfil = () => {
                 onClick={handleMenu}
                 color="inherit"
               >
-                <Avatar alt="User profile" src="https://res.cloudinary.com/app-firework1/image/upload/v1641503858/default-user-image_tzk82u.png" />
+                <Avatar alt="User profile" src={useUser.photoURL} />
               </IconButton>
               <Menu
                 sx={{ mt: '45px' }}
