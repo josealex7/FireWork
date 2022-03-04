@@ -3,7 +3,6 @@ import { useSelector, useDispatch } from 'react-redux';
 //import { listProjectAsync } from '../../actions/actionProyectos';
 import { Link } from "react-router-dom";
 import { FaArrowLeft, FaHeart } from "react-icons/fa";
-import ListFilters from './ListFilters';
 import './styleslistarAll.css';
 
 const ListMyProjects = () => {
@@ -32,7 +31,7 @@ const ListMyProjects = () => {
 
             <div className='container-second-all'>
                 <div className='container-filter-in-all'>
-                    <ListFilters />
+                    <h1>Mis proyectos</h1>
                 </div>
 
                 <div className='container-all-cards'>

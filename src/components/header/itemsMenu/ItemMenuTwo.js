@@ -41,9 +41,14 @@ const ItemMenuTwo = () => {
             MenuListProps={{
                 'aria-labelledby': 'basic-button',
             }}
-        >
-            <MenuItem onClick={handleClose}>Como Freelancer</MenuItem>
-            <MenuItem onClick={handleClose}>Como Cliente</MenuItem>
+          >
+            <Link to="/my-services" className="link">
+                <MenuItem onClick={handleClose}>Como Freelancer</MenuItem>
+            </Link>
+            
+            <Link to="/my-projects" className="link">
+                <MenuItem onClick={handleClose}>Como Cliente</MenuItem>
+            </Link>
         </Menu>
         
     </div>
