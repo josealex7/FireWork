@@ -26,10 +26,10 @@ export const serviciosReducer = (state = initialState, action) => {
         //         services: action.payload
         //     }
         
-        // case typesServices.detail:
-        //     return {
-        //         services: action.payload
-        //     }
+        case typesServices.detail:
+            return {
+                services: action.payload
+            }
 
         // case typesServices.category:
         //     return {

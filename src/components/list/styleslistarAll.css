@@ -14,7 +14,22 @@
     padding: 20px;
 }
 
+.container-title-filter {
+    margin-bottom: 20px;
+}
 
+.title-categories-filter {
+    margin-bottom: 10px;
+}
+
+.categories-checkbox-filter {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+
+    width: 300px;
+}
 
 /* TODOS ------------------------------------------------------------------------------------ */
 .first-container-all {

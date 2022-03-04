@@ -26,10 +26,10 @@ export const proyectosReducer = (state = initialState, action) => {
         //         projects: action.payload
         //     }
         
-        // case typesProyectos.detail:
-        //     return {
-        //         projects: action.payload
-        //     }
+        case typesProyectos.detail:
+            return {
+                projects: action.payload
+            }
 
         // case typesProyectos.category:
         //     return {

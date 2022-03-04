@@ -70,16 +70,16 @@ const UserPerfil = () => {
               >
                 <MenuItem onClick={handleClose}> Mi perfil</MenuItem>
                 <Divider />
-                <MenuItem onClick={handleClose}>Publicar proyecto</MenuItem>
+                {/* <MenuItem onClick={handleClose}>Publicar proyecto</MenuItem> */}
 
                 <MenuItem onClick={handleClose}>Ayuda</MenuItem>
                 <Divider />
-                <MenuItem>
+                {/* <MenuItem>
                     <ListItemIcon>
                         <Settings fontSize="small" />
                     </ListItemIcon>
                     Settings
-                </MenuItem>
+                </MenuItem> */}
 
                 <MenuItem
                   onClick={() => handleLogout()}
