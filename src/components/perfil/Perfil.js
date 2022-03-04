@@ -14,6 +14,7 @@ import { ListarUsuarioAsync } from "../../actions/actionUsuario";
 import "./perfil.css";
 
 const Perfil = () => {
+  
   const dispatch = useDispatch();
   dispatch(ListarUsuarioAsync());
 
