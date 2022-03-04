@@ -19,3 +19,9 @@ export const typesServices = {
     search: 'search service',
     detail: 'detail servicio',
 }
+
+export const types_Usuario = {
+    guardar : 'guardar',
+    actualizar : 'actualizar',
+    obtener : 'obtener'
+}

@@ -11,6 +11,7 @@ import AboutFirework from '../pages/AboutFirework';
 import RegistrarProyecto from '../components/registerServices/ofrecerTrabajo/RegistrarProyecto';
 import Test from '../pages/Test';
 import QuizOne from '../components/quicez/quiz-one/QuizOne';
+import Perfil from '../components/perfil/Perfil';
 import QuizTwo from '../components/quicez/quiz-two/QuizTwo';
 import RegistrarServicio from '../components/registerServices/ofrecerServicio/RegistrarServicio';
 import ListAllProjects from '../components/list/ListAllProjects';
@@ -33,6 +34,7 @@ export const DashboardRoutes = () => {
                         <Route path='/buscar-servicio' element={<ListAllServices />} />
                         <Route path="/test" element={<Test />} />
                         <Route path='/prueba-1' element={<QuizOne />} />
+                        <Route path='/perfil' element={<Perfil/>} />
                         <Route path='/prueba-2' element={<QuizTwo />} />
                         <Route path='*' element={<Navigate to="/home" />} />
                     </Routes>

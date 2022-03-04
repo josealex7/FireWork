@@ -4,6 +4,7 @@ import { loginReducer } from '../reducers/loginReducer';
 import { registerReducer } from '../reducers/registerReducer';
 import { proyectosReducer } from '../reducers/proyectosReducer';
 import { serviciosReducer } from '../reducers/serviciosReducer';
+import { usuarioReducer } from '../reducers/usuarioReducer';
 
 const composeEnhancers = (typeof window !== 'undefined' && 
 window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__) || compose;
@@ -13,6 +14,7 @@ const reducers = combineReducers({
     register: registerReducer,
     projects: proyectosReducer,
     services: serviciosReducer,
+    usuario: usuarioReducer
 })
 
 
