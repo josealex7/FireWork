@@ -48,7 +48,9 @@ const ItemMenuOne = () => {
             <Link to="/buscar-servicio" className="link">
                 <MenuItem onClick={handleClose}>Encuentra servicios</MenuItem>
             </Link>
-            {/* <MenuItem onClick={handleClose}>Mis clientes favoritos</MenuItem> */}
+            <Link to="/my-favorites" className="link">
+                <MenuItem onClick={handleClose}>Mis favoritos</MenuItem>
+            </Link>
         </Menu>
         
     </div>

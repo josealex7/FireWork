@@ -18,7 +18,7 @@ import ListAllProjects from '../components/list/ListAllProjects';
 import ListAllServices from '../components/list/ListAllServices';
 import ListMyProjects from '../components/list/ListMyProjects';
 import ListMyServices from '../components/list/ListMyServices';
-
+import ListFavorites from '../components/list/ListFavorites';
 
 export const DashboardRoutes = () => {
     return ( 
@@ -36,6 +36,7 @@ export const DashboardRoutes = () => {
                         <Route path='/buscar-servicio' element={<ListAllServices />} />
                         <Route path='/my-projects' element={<ListMyProjects />} />
                         <Route path='/my-services' element={<ListMyServices />} />
+                        <Route path='/my-favorites' element={<ListFavorites />} />
                         <Route path="/test" element={<Test />} />
                         <Route path='/prueba-1' element={<QuizOne />} />
                         <Route path='/perfil' element={<Perfil/>} />
