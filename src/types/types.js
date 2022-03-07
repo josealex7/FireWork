@@ -27,3 +27,8 @@ export const types_Usuario = {
     actualizar : 'actualizar',
     obtener : 'obtener'
 }
+
+export const types_Test = {
+    enviar: 'enviar',
+    obtener: 'obtener'
+}

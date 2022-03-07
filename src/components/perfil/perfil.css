@@ -1,4 +1,4 @@
-.imagenColombia {
+  .imagenColombia {
     width: 30px;
     margin-right: 2%;
   }
@@ -80,4 +80,8 @@
   .containerBtn {
     text-align: center;
     margin-bottom: 5%;
+  }
+
+  .componente_test{
+    text-align: center;
   }

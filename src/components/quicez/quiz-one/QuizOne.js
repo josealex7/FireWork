@@ -1,8 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import questions from './questionsOne';
 import './stylesQuizOne.css';
+import { enviarTestAsync } from '../../../actions/actionTest'
+import { useSelector, useDispatch } from "react-redux";
+import User from "../../../hooks/User";
 
 const QuizOne = () => {
+
+    const dispatch = useDispatch();
+    const useUser = User();
 
     const [currentQuestion, setCurrentQuestion] = useState(0);
     const [score, setScore] = useState(0);
@@ -29,6 +35,14 @@ const QuizOne = () => {
         }, 1500);
     }
 
+    const enviarTest =(_)=>{
+        dispatch(enviarTestAsync({
+            id_user: useUser.uid,
+            nombre_prueba: 'html',
+            puntaje: score
+        }))
+    }
+
     useEffect(() => {
         const interval = setInterval(() => {
             if (timeRemaining > 0) setTimeRemaining((prev) => prev - 1);
@@ -48,7 +62,23 @@ const QuizOne = () => {
                         <span>
                             Obtuviste {score} de {questions.length}
                         </span>
-                        
+                        <div>
+                            <span>
+                            {score >=8 ? '¡Felicitaciones!':'Siguen intentado'}
+                            </span>
+                        </div>
+                        {score >7?
+                            <button
+                            className="btn-actions-test"
+                            onClick={() => {
+                                enviarTest()
+                                (window.location.href = "/perfil")
+                            }}
+                            >
+                                Obtener Insignia
+                            </button>:
+                            <div></div>
+                        }
                         <button
                             className="btn-actions-test"
                             onClick={() => {
