@@ -10,6 +10,7 @@ export const typesProyectos = {
     delete: 'delete proyecto',
     search: 'search proyecto',
     detail: 'detail proyecto',
+    category: 'Category proyecto',
 }
 
 export const typesServices = {
@@ -18,6 +19,7 @@ export const typesServices = {
     delete: 'delete service',
     search: 'search service',
     detail: 'detail servicio',
+    category: 'Category servicio',
 }
 
 export const types_Usuario = {

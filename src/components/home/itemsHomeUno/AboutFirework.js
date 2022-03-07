@@ -1,9 +1,22 @@
 import React from 'react';
+import { Link } from "react-router-dom";
+import { FaArrowLeft } from "react-icons/fa";
 import './stylesItemsHome.elements.css';
 
 const AboutFirework = () => {
     return (
         <section className="first-container" id="about">
+            <Link to="/homeuno" >
+                <button className="container-regresar">
+                    <div className='container-icon-regresar'>
+                        <FaArrowLeft />
+                    </div>
+                    <div>
+                        <p className='regresar'>Volver</p>
+                    </div> 
+                </button>
+            </Link>
+
             <div className="container-one">
                 <div>
                     <h2 className="container-one-title">¿Cómo funciona FireWork?</h2>

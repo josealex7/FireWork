@@ -1,44 +1,43 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { listProjectAsync, showDetailProjectAsync } from '../../actions/actionProyectos';
 import { Link, useNavigate } from "react-router-dom";
+import { categoryProjectAsync, showDetailProjectAsync } from '../actions/actionProyectos';
 import { FaArrowLeft, FaHeart } from "react-icons/fa";
-import ListFilters from './ListFilters';
-import './styleslistarAll.css';
 
-const ListAllProjects = () => {
+const Busquedas = () => {
 
     let history = useNavigate();
 
     const dispatch = useDispatch();
 
     const { projects } = useSelector((store) => store.projects);
-    //console.log(projects);
+    console.log(projects)
 
     useEffect(() => {
-        dispatch(listProjectAsync());
+        dispatch(categoryProjectAsync());
     }, []);
-
+    
     return (
-        <div className='first-container-all'>
+        <section>
+
             <Link to="/home" >
-                <button className="container-regresar-all">
-                    <div className='container-icon-regresar-all'>
+                <button className="container-regresar">
+                    <div className='container-icon-regresar'>
                         <FaArrowLeft />
                     </div>
                     <div>
-                        <p className='regresar-all'>Volver al Inicio</p>
+                        <p className='regresar'>Volver al inicio</p>
                     </div> 
                 </button>
             </Link>
 
-            <div className='container-second-all'>
-                <div className='container-filter-in-all'>
-                    <ListFilters />
-                </div>
+            <h3>Resultados de su búsqueda</h3>
 
-                <div className='container-all-cards'>
-                    {projects.map((e, i) => (
+            <>
+            {
+                projects.map((e, i) => (
+                    <div key={i}>
+                        
                         <div key={i} className="card-all-projects">
                             <button
                                 className="card-part-one"
@@ -65,12 +64,12 @@ const ListAllProjects = () => {
                                 <p className="info-pago-oferta-card-all">Pago de <span className="precio-oferta-card-all">{e.pagoproject}$</span></p>
                             </div>
                         </div>
-                    ))}
-                    
-                </div>
-            </div>
-        </div>
+                    </div>
+                ))
+            }
+        </>
+        </section>
     )
-};
+}
 
-export default ListAllProjects;
+export default Busquedas;

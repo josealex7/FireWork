@@ -119,6 +119,13 @@
     margin-bottom: 20px;
 
     border-bottom: 1px solid #f1f1f1;
+
+    background: none;
+    border: none;
+}
+
+.card-part-one:hover {
+    cursor: pointer;
 }
 
 .container-banner-all-projects {
@@ -132,7 +139,6 @@
 .banner-all-projects {
     width: 240px;
     height: 180px;
-    object-fit: cover;
 
     margin-bottom: 20px;
 }

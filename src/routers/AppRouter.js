@@ -15,6 +15,8 @@ import Footer from '../components/footer/Footer';
 import Loading from '../components/loading/Loading';
 import HomeOne from "../pages/HomeOne";
 import Spinner from "../components/accesorios/Spinner";
+import Ayuda from '../pages/Ayuda';
+import Busquedas from '../pages/Busquedas';
 
 export default function AppRouter() {
 
@@ -50,6 +52,10 @@ if(checking){
       <Routes>
 
         <Route path="/" element={ <Loading /> } />
+
+        <Route path='/ayuda' element={<Ayuda />} />
+
+        <Route path='/busqueda' element={<Busquedas />} />
         
         {/* <Route path="/" element={
                     <PublicRoute isAuthenticated={isLoggedIn}>

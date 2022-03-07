@@ -21,20 +21,20 @@ export const proyectosReducer = (state = initialState, action) => {
         //         projects: state.projects.filter(proj => proj.codeproject !== action.payload)
         //     }
         
-        // case typesProyectos.search:
-        //     return {
-        //         projects: action.payload
-        //     }
+        case typesProyectos.search:
+            return {
+                projects: action.payload
+            }
         
         case typesProyectos.detail:
             return {
                 projects: action.payload
             }
 
-        // case typesProyectos.category:
-        //     return {
-        //         projects: state.projects.filter((proj) => proj.categoryproject === action.payload)
-        //     }
+        case typesProyectos.category:
+            return {
+                projects: state.projects.filter((proj) => proj.category === action.payload)
+            }
     
         default:
             return state;

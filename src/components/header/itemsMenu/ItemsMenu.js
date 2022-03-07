@@ -12,16 +12,6 @@ const ItemsMenu = () => {
   return (
     <ItemsContainer>
         
-        {/* Boton 0 */}
-        <Link to="/home" className="links">
-            <Button
-                id="basic-button"
-                style={{color: '#fff'}}
-            >
-                Inicio
-            </Button>
-        </Link>
-        
         {/* Boton 1 */}
         <ItemMenuOne />
         
@@ -32,6 +22,16 @@ const ItemsMenu = () => {
         {/* <ItemMenuThree /> */}
         
         {/* Boton 4 */}
+        <Link to="/test" className="links">
+            <Button
+                id="basic-button"
+                style={{color: '#fff'}}
+            >
+                Hacer pruebas
+            </Button>
+        </Link>
+        
+        {/* Boton 5 */}
         <Link to="/about" className="links">
             <Button
                 id="basic-button"

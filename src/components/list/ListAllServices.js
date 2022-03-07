@@ -1,12 +1,14 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { listServiceAsync } from '../../actions/actionServices';
-import { Link } from "react-router-dom";
+import { listServiceAsync, showDetailServiceAsync } from '../../actions/actionServices';
+import { Link, useNavigate } from "react-router-dom";
 import { FaArrowLeft, FaHeart } from "react-icons/fa";
 import ListFilters from './ListFilters';
 import './styleslistarAll.css';
 
 const ListAllServices = () => {
+
+    let history = useNavigate();
 
     const dispatch = useDispatch();
 
@@ -38,7 +40,13 @@ const ListAllServices = () => {
                 <div className='container-all-cards'>
                     {services.map((e, i) => (
                         <div key={i} className="card-all-projects">
-                            <div className="card-part-one">
+                            <div
+                                className="card-part-one"
+                                onClick={() => {
+                                    dispatch(showDetailServiceAsync(e.tituloservice))
+                                    history("/detail-service")
+                                }}
+                            >
                                 <div className="container-banner-all-projects">
                                     <img src={e.banner} alt="banner" title="Banner" className="banner-all-projects" />
                                 </div>

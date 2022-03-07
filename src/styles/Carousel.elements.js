@@ -19,8 +19,22 @@ export const TitleCarouselTwo = styled.h2`
   color: #3D56B2;
 `
 
+export const ContainerImgsCarousel = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`
+
+export const ContainerImgCarousel = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+`
+
 export const ImgCarouselTwo = styled.img`
-  width: auto;
+  width: 200px;
   height: auto;
   margin-left: 30px;
 `

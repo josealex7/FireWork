@@ -1,6 +1,6 @@
 import React from 'react';
 import Carousel from 'react-elastic-carousel';
-import { FirstContainer, TitleCarouselTwo, TitleCard, ImgCarouselTwo } from '../../../styles/Carousel.elements';
+import { FirstContainer, TitleCarouselTwo, TitleCard, ContainerImgsCarousel, ContainerImgCarousel, ImgCarouselTwo } from '../../../styles/Carousel.elements';
 
 const CarouselOne = () => {
     return (
@@ -10,50 +10,76 @@ const CarouselOne = () => {
 
             <Carousel itemsToShow={5} pagination={false}>
                 
-                <div>
-                    <ImgCarouselTwo src="https://res.cloudinary.com/app-firework1/image/upload/v1645672148/carousel/translation_ay5qfi.jpg" alt="categories" title="Translation" />
-                    <TitleCard>Traducciones</TitleCard>
-                </div>
+                <ContainerImgsCarousel>
+                    <ContainerImgCarousel>
+                        <ImgCarouselTwo src="https://res.cloudinary.com/app-firework1/image/upload/v1646592701/carousel/Screenshot_2022-03-06_134909_eomfbd.png" alt="categories" title="Frontend"/>
+                    </ContainerImgCarousel>
+                    <TitleCard>Frontend</TitleCard>
+                </ContainerImgsCarousel>
                 
-                <div>
-                    <ImgCarouselTwo src="https://res.cloudinary.com/app-firework1/image/upload/v1645672145/carousel/seo_f3ifgf.jpg" alt="categories" title="Seo" />
-                    <TitleCard>Seo</TitleCard>
-                </div>
+                <ContainerImgsCarousel>
+                    <ContainerImgCarousel>
+                        <ImgCarouselTwo src="https://res.cloudinary.com/app-firework1/image/upload/v1646589206/carousel/pngwing.com_1_gbbbqw.png" alt="categories" title="Backend" />
+                    </ContainerImgCarousel>
+                    
+                    <TitleCard>Backend</TitleCard>
+                </ContainerImgsCarousel>
 
-                <div>
-                    <ImgCarouselTwo src="https://res.cloudinary.com/app-firework1/image/upload/v1645672143/carousel/logo-design_vxa3es.jpg" alt="categories" title="Logo Design" />
-                    <TitleCard>Diseño de logos</TitleCard>
-                </div>
+                <ContainerImgsCarousel>
+                    <ContainerImgCarousel>
+                        <ImgCarouselTwo src="https://res.cloudinary.com/app-firework1/image/upload/v1646589196/carousel/pngwing.com_5_gmlj4g.png" alt="categories" title="Fullstack" />
+                    </ContainerImgCarousel>
+                    
+                    <TitleCard>Fullstack</TitleCard>
+                </ContainerImgsCarousel>
 
-                <div>
-                    <ImgCarouselTwo src="https://res.cloudinary.com/app-firework1/image/upload/v1645672141/carousel/developers_hbdjhq.jpg" alt="categories" title="Developers" />
-                    <TitleCard>Desarrollo web</TitleCard>
-                </div>
+                <ContainerImgsCarousel>
+                    <ContainerImgCarousel>
+                        <ImgCarouselTwo src="https://res.cloudinary.com/app-firework1/image/upload/v1646600885/carousel/uiux_g3tiqq.png" alt="categories" title="Diseño UI/UX" />
+                    </ContainerImgCarousel>
+                    
+                    <TitleCard>Diseño UI/UX</TitleCard>
+                </ContainerImgsCarousel>
 
-                <div>
-                    <ImgCarouselTwo src="https://res.cloudinary.com/app-firework1/image/upload/v1645672138/carousel/illustration_iox0dt.jpg" alt="categories" title="Illustration" />
-                    <TitleCard>Ilustraciones</TitleCard>
-                </div>
+                <ContainerImgsCarousel>
+                    <ContainerImgCarousel>
+                        <ImgCarouselTwo src="https://res.cloudinary.com/app-firework1/image/upload/v1646589194/carousel/pngwing.com_7_ejw3nf.png" alt="categories" title="Data Science" />
+                    </ContainerImgCarousel>
+                    
+                    <TitleCard>Data Science</TitleCard>
+                </ContainerImgsCarousel>
 
-                <div>
-                    <ImgCarouselTwo src="https://res.cloudinary.com/app-firework1/image/upload/v1645672137/carousel/book-covers_kp9yy3.jpg" alt="categories" title="Book Covers" />
-                    <TitleCard>Portada de libros</TitleCard>
-                </div>
+                <ContainerImgsCarousel>
+                    <ContainerImgCarousel>
+                        <ImgCarouselTwo src="https://res.cloudinary.com/app-firework1/image/upload/v1646589207/carousel/pngwing.com_apdhzb.png" alt="categories" title="Aplicaciones de escritorio" />
+                    </ContainerImgCarousel>
+                    
+                    <TitleCard>Aplicaciones de escritorio</TitleCard>
+                </ContainerImgsCarousel>
 
-                <div>
-                    <ImgCarouselTwo src="https://res.cloudinary.com/app-firework1/image/upload/v1645672135/carousel/animated-explainer_jxylv3.jpg" alt="categories" title="Animated Explainer" />
-                    <TitleCard>Fotografías</TitleCard>
-                </div>
+                <ContainerImgsCarousel>
+                    <ContainerImgCarousel>
+                        <ImgCarouselTwo src="https://res.cloudinary.com/app-firework1/image/upload/v1646589195/carousel/pngwing.com_6_gnfc0j.png" alt="categories" title="Aplicaciones moviles" />
+                    </ContainerImgCarousel>
+                    
+                    <TitleCard>Aplicaciones móviles</TitleCard>
+                </ContainerImgsCarousel>
 
-                <div>
-                    <ImgCarouselTwo src="https://res.cloudinary.com/app-firework1/image/upload/v1645672132/carousel/social_amugpn.jpg" alt="categories" title="Social" />
-                    <TitleCard>Redes sociales</TitleCard>
-                </div>
+                <ContainerImgsCarousel>
+                    <ContainerImgCarousel>
+                        <ImgCarouselTwo src="https://res.cloudinary.com/app-firework1/image/upload/v1646589215/carousel/pngwing.com_8_e8xne3.png" alt="categories" title="e-commerce" />
+                    </ContainerImgCarousel>
+                    
+                    <TitleCard>e-commerce</TitleCard>
+                </ContainerImgsCarousel>
 
-                <div>
-                    <ImgCarouselTwo src="https://res.cloudinary.com/app-firework1/image/upload/v1645672131/carousel/voiceover_yjbxi8.jpg" alt="categories" title="Voiceover" />
-                    <TitleCard>Voiceover</TitleCard>
-                </div>
+                <ContainerImgsCarousel>
+                    <ContainerImgCarousel>
+                        <ImgCarouselTwo src="https://res.cloudinary.com/app-firework1/image/upload/v1646589206/carousel/pngwing.com_3_zo41qc.png" alt="categories" title="Testing" />
+                    </ContainerImgCarousel>
+                    
+                    <TitleCard>Testing</TitleCard>
+                </ContainerImgsCarousel>
 
             </Carousel>
         </FirstContainer>

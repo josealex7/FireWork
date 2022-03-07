@@ -428,9 +428,9 @@ const RegistrarProyecto = () => {
                             <p className="text--register-proyect">Completaste todos los pasos.</p>
                             <p className="text--register-proyect">¡Estás listo para encontrar profesionales que puedan desarrollar tu proyecto!</p>
                 
-                            <Link to="/list" className="links">
+                            <Link to="/buscar-trabajo" className="links">
                                 <button className="btn-register-proyect">
-                                    Ver mis proyectos publicados
+                                    Ver proyectos publicados
                                     <div className="container-icon-btn">
                                         <FaMousePointer />
                                     </div>

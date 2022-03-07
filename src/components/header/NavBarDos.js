@@ -20,7 +20,7 @@ const NavBarDos = () => {
 
                     <Button2>
                         <Link to="/registro" className='links'>
-                            Registrate
+                            Regístrate
                         </Link>
                     </Button2>
                 </ContainerButtons>

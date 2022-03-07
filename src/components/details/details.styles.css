@@ -1,0 +1,223 @@
+/* GENERALES -------------------------------------------------------------------------- */
+.first-container-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-regresar-details {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+    margin-top: 30px;
+    border: none;
+    background: #fff;
+    margin-left: -625px;
+    font-size: 14px;
+    padding: 3px 10px;
+}
+
+.container-regresar-details:hover {
+    cursor: pointer;
+}
+
+.container-icon-regresar-details {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-right: 10px;
+}
+
+.regresar-details {
+    font-weight: bold;
+    color: #000000;
+}
+
+.span-negrita-details {
+    font-weight: bold;
+}
+
+.text-details {
+    margin-bottom: 8px;
+}
+
+/* DETAILS PROJECTS ------------------------------------------------------------------- */
+.container-details {
+    margin-bottom: 60px;
+    background: #f1f1f1;
+    padding: 50px 60px 50px 60px;
+}
+
+.head-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: 400px;
+}
+
+.banner-project-detail {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    object-fit: contain;
+}
+
+.container-btns-details {
+    display: flex;
+    flex-direction: row;
+    align-items: start;
+    justify-content: center;
+
+    margin: 20px 0px 20px 0px;
+}
+
+.btn-details-one {
+    background: #3D56B2;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    font-family: Arial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    text-align: center;
+    padding: 10px;
+
+    margin-right: 10px;
+}
+
+.btn-details-two {
+    background: #d3d3d8;
+    border: none;
+    border-radius: 10px;
+    color: #000000;
+    font-family: Arial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    text-align: center;
+    padding: 10px;
+}
+
+.btn-details-one:hover {
+    cursor: pointer;
+}
+
+.btn-details-two:hover {
+    cursor: pointer;
+}
+
+.container-title-detail-project {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+
+    width: 500px;
+    height: auto;
+    padding: 20px;
+
+    background: rgba(255, 255, 255, 0.925);
+    position: absolute;
+    margin-top: 300px;
+    margin-bottom: 30px;
+}
+
+.body-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+
+    margin-top: 70px;
+}
+
+.container-left-details {
+    width: 700px;
+    padding: 0px 0px 20px 0px;
+}
+
+
+.container-right-details {
+    width: 700px;
+    height: auto;
+
+    border: none;
+    border-radius: 10px;
+
+    /* padding: 20px; */
+
+    margin-bottom: 30px;
+}
+
+.border-bottom-details {
+    border-bottom: 1px solid #fff;
+    margin-bottom: 20px;
+}
+
+.requisitos-tecnicos-details {
+    border-bottom: 1px solid #fff;
+    margin-bottom: 20px;
+    padding: 20px 0px;
+}
+
+/* DETAILS SERVICES ------------------------------------------------------------------- */
+.container-imgs-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    /* border: 1px solid gray; */
+}
+
+.container-litles-img-details {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    width: auto;
+}
+
+.container-big-img-details {
+    height: 300px;
+    margin-bottom: 40px;
+}
+
+.img-principal-details {
+    width: 600px;
+    height: auto;
+}
+
+.img-principal-details:hover {
+    cursor: pointer;
+}
+
+.container-imgs-portafolio-details {
+    width: 200px;
+    object-fit: cover;
+}
+
+.imgs-portafolio-details {
+    width: 200px;
+    /* object-fit: contain; */
+}
+
+.imgs-portafolio-details:hover {
+    cursor: pointer;
+}
+
+/* .container-icon-link {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+} */

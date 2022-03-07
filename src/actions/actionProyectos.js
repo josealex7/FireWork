@@ -5,11 +5,11 @@ import { db } from '../firebase/firebaseConfig';
 //CATEGORIES Project ---------------------------------------------
 
 //Action CATEGORY Project Async
-export const categoryProjectAsync = (category) => {
+export const categoryProjectAsync = (categoria) => {
 
     return async (dispatch) => {
         const projCollections = collection(db, "proyectos");
-        const q = query(projCollections, where("categoryproject", "==", category))
+        const q = query(projCollections, where("category", "==", categoria))
         const datos = await getDocs(q);
         //console.log(datos);
 
@@ -23,10 +23,10 @@ export const categoryProjectAsync = (category) => {
 }
 
 //Action Category Product Sync
-export const categoryProjectSync = (category) => {
+export const categoryProjectSync = (categoria) => {
     return {
         type: typesProyectos.category,
-        payload: category
+        payload: categoria
     }
 }
 
@@ -72,11 +72,11 @@ export const listCategoriesSync = (categories) => {
 //SEARCH Project ---------------------------------------------
 
 //Action Search Project Async
-export const searchProjectAsync = (project) => {
+export const searchProjectAsync = (categoria) => {
 
     return async (dispatch) => {
         const projCollections = collection(db, "proyectos");
-        const q = query(projCollections, where("categoryproject", "==", project))
+        const q = query(projCollections, where("category", "==", categoria))
         const datos = await getDocs(q);
         //console.log(datos);
 
@@ -101,11 +101,11 @@ export const searchProjectSync = (project) => {
 //SHOW DETAILS Project ---------------------------------------------
 
 //Action Show Detail Project Async
-export const showDetailProjectAsync = (code) => {
+export const showDetailProjectAsync = (title) => {
 
     return async (dispatch) => {
         const projCollections = collection(db, "proyectos");
-        const q = query(projCollections, where("codeproject", "==", code))
+        const q = query(projCollections, where("titleproject", "==", title))
         const datos = await getDocs(q);
         //console.log(datos);
 
@@ -113,7 +113,7 @@ export const showDetailProjectAsync = (code) => {
         datos.forEach((doc) => {
             proyecto.push(doc.data())
         })
-        //console.log(producto);
+        console.log(proyecto);
         dispatch(showDetailProjectSync(proyecto))
     }
 }

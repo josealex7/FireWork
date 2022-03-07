@@ -101,11 +101,11 @@ export const searchServiceSync = (service) => {
 //SHOW DETAILS Project ---------------------------------------------
 
 //Action Show Detail Service Async
-export const showDetailServiceAsync = (code) => {
+export const showDetailServiceAsync = (titulo) => {
 
     return async (dispatch) => {
         const servCollections = collection(db, "servicios");
-        const q = query(servCollections, where("codeservice", "==", code))
+        const q = query(servCollections, where("tituloservice", "==", titulo))
         const datos = await getDocs(q);
         //console.log(datos);
 
@@ -113,7 +113,7 @@ export const showDetailServiceAsync = (code) => {
         datos.forEach((doc) => {
             servicio.push(doc.data())
         })
-        //console.log(servicio);
+        console.log(servicio);
         dispatch(showDetailServiceSync(servicio))
     }
 }

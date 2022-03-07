@@ -81,7 +81,9 @@ const UserPerfil = () => {
                 <Divider />
                 {/* <MenuItem onClick={handleClose}>Publicar proyecto</MenuItem> */}
 
-                <MenuItem onClick={handleClose}>Ayuda</MenuItem>
+                <Link to="/ayuda" className='linkSinEstilos'>
+                     <MenuItem onClick={handleClose}>Ayuda</MenuItem>
+                </Link>
                 <Divider />
                 {/* <MenuItem>
                     <ListItemIcon>

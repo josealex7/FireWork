@@ -29,23 +29,23 @@ const RegistrarServicio = () => {
     
     const seleccionarCategoria = () =>{
         if(categoria==='frontend'){
-            return ['frontend','Frontend']
+            return ['Frontend']
         } else if (categoria==='backend'){
-            return ['backend', 'Backend']
+            return ['Backend']
         } else if (categoria==='fullstack'){
-            return ['fullstack', 'Fullstack']
+            return ['Fullstack']
         } else if (categoria==='disenio'){
-            return ['disenio', 'Diseño UI/UX']
+            return ['Diseño UI/UX']
         } else if (categoria==='disenio'){
-            return ['dataescience', 'Datae Science']
+            return ['Data Science']
         } else if (categoria==='escritorio'){
-            return ['escritorio', 'Aplicaciones de escritorio']
+            return ['Aplicaciones de escritorio']
         } else if (categoria==='movil'){
-            return ['movil', 'Aplicaciones moviles']
+            return ['Aplicaciones móviles']
         } else if (categoria==='ecommerce'){
-            return ['ecommerce','e-commerce']
+            return ['e-commerce']
         } else {
-            return ['testing','Testing']
+            return ['Testing']
         }
     }
     // Categoria -------------------------------------------------------
@@ -525,9 +525,9 @@ const RegistrarServicio = () => {
                             <p className="text--register-proyect">Completaste todos los pasos.</p>
                             <p className="text--register-proyect">¡Estás listo para encontrar clientes que quieran contratar!</p>
                 
-                            <Link to="/list" className="links">
+                            <Link to="/buscar-servicio" className="links">
                                 <button className="btn-register-proyect">
-                                    Ver mis servicios publicados
+                                    Ver servicios publicados
                                     <div className="container-icon-btn">
                                         <FaMousePointer />
                                     </div>

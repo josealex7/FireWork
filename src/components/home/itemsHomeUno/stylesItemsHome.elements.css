@@ -1,3 +1,8 @@
+/* HEADER */
+.typical {
+    margin-top: 30px;
+}
+
 /* ABOUT FIREWORK COMPONENT ---------------------------------------------------------- */
 
 .first-container {
@@ -99,6 +104,120 @@
 
 .text-step {
     font-size: 17px;
+}
+
+/* FUNCIONES FIREWORK ---------------------------------------------------------- */
+.first-container-funciones {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-title-funciones {
+    margin: 50px 0px;
+}
+
+.title-funciones {
+    font-size: 40px;
+    color: #3D56B2;
+}
+
+.container-containers-funciones {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-type-one-funciones {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    margin-right: 150px;
+}
+
+.container-type-two-funciones {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-step-funciones {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    height: 300px;
+}
+
+.imgs-funciones {
+    width: auto;
+    height: 240px;
+
+    margin-bottom: 20px;
+}
+
+.title-step-funciones {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.container-text-funciones {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 450px;
+    height: auto;
+
+    text-align: start;
+}
+
+.btns-funciones {
+    background: #3D56B2;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    font-family: Arial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    text-align: center;
+    padding: 10px;
+
+    margin-right: 10px;
+    margin-top: 20px;
+}
+
+.btns-funciones:hover {
+    cursor: pointer;
+}
+
+.btn-about-funciones {
+    background: #d3d3d8;
+    border: none;
+    border-radius: 10px;
+    color: #000000;
+    font-family: Arial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    text-align: center;
+    padding: 10px;
+
+    margin-right: 10px;
+    margin-top: 50px;
+}
+
+.btn-about-funciones:hover {
+    cursor: pointer;
 }
 
 /* INVITE TO REGISTER COMPONENT ----------------------------------------------------------*/
