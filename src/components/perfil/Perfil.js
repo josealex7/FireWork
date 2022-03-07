@@ -19,6 +19,7 @@ const Perfil = () => {
   dispatch(ListarUsuarioAsync());
 
   const { datosUsuario } = useSelector((store) => store.usuario);
+  const { test } = useSelector((store) => store.test);
 
   const useUser = User();
 
@@ -173,6 +174,26 @@ const Perfil = () => {
             </button>
           </div>
         </form>
+        <div>
+          <h1 className="componente_test">Insignias adquiridas</h1>
+          {
+            test != undefined?
+            <div>
+              {
+                test.map((testIndividual=>(
+                  <div>
+                    <h1>{testIndividual.nombre_prueba}</h1>
+                    
+                  </div>
+                )))
+              }
+            </div>
+            :
+            <div>
+              <h1>Aún no haz adquirido ninguna insignia</h1>
+            </div>
+          }
+        </div>
       </div>
     </>
   );
