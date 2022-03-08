@@ -5,7 +5,53 @@ import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { searchProjectAsync } from '../../../actions/actionProyectos';
 import { FaSearch } from "react-icons/fa";
-import './UserPerfil.css'
+import './UserPerfil.css';
+
+import SearchIcon from '@mui/icons-material/Search';
+import InputBase from '@mui/material/InputBase';
+import { styled, alpha } from '@mui/material/styles';
+
+const Search = styled('div')(({ theme }) => ({
+  position: 'relative',
+  borderRadius: theme.shape.borderRadius,
+  backgroundColor: alpha(theme.palette.common.white, 0.15),
+  '&:hover': {
+    backgroundColor: alpha(theme.palette.common.white, 0.25),
+  },
+  marginLeft: 0,
+  width: '100%',
+  [theme.breakpoints.up('sm')]: {
+    marginLeft: theme.spacing(1),
+    width: 'auto',
+  },
+}));
+
+const SearchIconWrapper = styled('div')(({ theme }) => ({
+  padding: theme.spacing(0, 2),
+  height: '100%',
+  position: 'absolute',
+  pointerEvents: 'none',
+  display: 'flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+}));
+
+const StyledInputBase = styled(InputBase)(({ theme }) => ({
+  color: 'inherit',
+  '& .MuiInputBase-input': {
+    padding: theme.spacing(1, 1, 1, 0),
+    // vertical padding + font size from searchIcon
+    paddingLeft: `calc(1em + ${theme.spacing(4)})`,
+    transition: theme.transitions.create('width'),
+    width: '100%',
+    [theme.breakpoints.up('sm')]: {
+      width: '12ch',
+      '&:focus': {
+        width: '20ch',
+      },
+    },
+  },
+}));
 
 const SearchWords = () => {
 
@@ -23,33 +69,24 @@ const SearchWords = () => {
         onSubmit: ({ search }) => {
             dispatch(searchProjectAsync(search))
             //console.log(search);
+            history("/busqueda")
         }
     })
   
     return (
       <div>
-          <div className="container-form-search">
-                <form onSubmit={formik.handleSubmit}>
-          
-                <input
-                    className="input-search"
-                    id="search"
-                    name="search"
-                    type="text"
-                    aria-label="Search Products"
-                    placeholder="Buscar por categoría"
-                    onChange={formik.handleChange}
-                />
-                <button
-                    className="btn-search"
-                    type="submit"
-                    onClick={() => history("/busqueda")}
-                >
-                    <FaSearch />
-                </button>
-                
-               </form>
-            </div>
+
+          <Search>
+            <SearchIconWrapper>
+              <SearchIcon />
+            </SearchIconWrapper>
+            <StyledInputBase
+              name="search"
+              placeholder="Buscar"
+              inputProps={{ 'aria-label': 'search' }}
+            />
+          </Search>
+
       </div>
     )
 }

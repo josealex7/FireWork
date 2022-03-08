@@ -100,3 +100,44 @@ export const LinkRedes = styled.a`
     margin-top: 0px;
   }
 `
+
+// Scroll -------------------------------------------------------
+export const ScrollToTop = styled.div`
+  bottom: 0px;
+  right: 0px;
+  animation: fadeIn 700ms ease-in-out 1s both;
+  cursor: pointer;
+  width: 100%;
+  height: 50px;
+  @keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+`
+
+export const BackTopContainer = styled.div`
+  text-align: center;
+  width: 60px;
+  height: 60px;
+  background-color: #f1f1f1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+
+  margin-left: 1200px;
+}
+`
+
+export const Indication = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #3D56B2;
+  bottom: 0px;
+  font-size: 40px;
+`

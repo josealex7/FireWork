@@ -5,6 +5,7 @@ import {
 import HomeTwo from '../pages/HomeTwo';
 import NavBarUno from '../components/header/NavBarUno';
 import Footer from '../components/footer/Footer';
+import BackToTop from '../components/footer/BackToTop';
 import AboutFirework from '../pages/AboutFirework';
 //import Notifications from '../pages/Notifications';
 //import Messages from '../pages/Messages';
@@ -47,7 +48,8 @@ export const DashboardRoutes = () => {
                         <Route path='/prueba-2' element={<QuizTwo />} />
                         
                         <Route path='*' element={<Navigate to="/home" />} />
-                    </Routes>
+                </Routes>
+                <BackToTop />
                 <Footer />
             </div>
         </>

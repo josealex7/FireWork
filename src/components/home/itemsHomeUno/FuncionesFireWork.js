@@ -38,9 +38,9 @@ const FuncionesFireWork = () => {
                 </div>
             </div>
 
-            <Link to="/ayuda" className='links'>
+            {/* <Link to="/ayuda" className='links'>
                 <button type="button" className="btn-about-funciones">Saber más sobre FireWork</button>
-            </Link>
+            </Link> */}
             
         </section>
     )

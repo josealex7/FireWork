@@ -10,7 +10,7 @@ const HeaderHome = () => {
                 <LogoImg src="https://res.cloudinary.com/app-firework1/image/upload/v1640799953/logo/logo4_sibvmc.svg" alt="logo" />
             </ContainerLogoImg>
             
-            <Subtitle>Encuentra los mejores servicios <SubtitleSpan>freelance</SubtitleSpan> para desarrolladores</Subtitle>
+            <Subtitle>Encuentra los mejores trabajos <SubtitleSpan>freelance</SubtitleSpan> para desarrolladores</Subtitle>
 
             <ReactTypingEffect
                 text={["Frontend", "Backend", "Fullstack", "Diseño UI/UX", "Data Science", "Aplicaciones de escritorio", "Aplicaciones móviles", "e-commerce", "Testing"]}

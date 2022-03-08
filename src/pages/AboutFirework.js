@@ -23,10 +23,10 @@ const AboutFirework = () => {
                 <h1 className='title-about'>FireWork</h1>
 
                 <div className='text-container-about'>
-                    <p className='text-presentation-about'>En FireWork, creemos que los profesionales de desarrollo freelancers merecen tener acceso a mejores acuerdos de trabajo con sus clientes. Es nuestra promesa hacia nuestros usuarios ofrecer Calidad, Eficiencia y Valor en el proceso de contratación a través de una plataforma segura y fácil de usar.</p>
+                    <p className='text-presentation-about'>En FireWork, creemos que los profesionales de desarrollo freelancers merecen tener acceso a mejores acuerdos de trabajo con sus clientes. Es nuestra promesa hacia nuestros usuarios ofrecer Calidad, Eficiencia y Valor en el proceso de tratos entre frelancers y clientes a través de una plataforma segura y fácil de usar.</p>
                     <div className='text-explication-about'>
                         <p className='text-about-one'>Con un récord en los índices de desempleo, nunca ha sido más difícil encontrar y conectarse con el mejor talento disponible. Sin embargo, mientras que las agencias de empleo tradicionales afirman que pueden encontrar excelentes candidatos, sus servicios tienen un alto costo en términos de tiempo dedicado a analizar a los candidatos y las tarifas escandalosas que cobran por contratación.</p>
-                        <p className='text-about-two'>Creamos FireWork después de escuchar a innumerables empleados y ejecutivos de recursos humanos lamentarse por la falta de una solución simple y económica que permitiera a sus equipos de recursos humanos realizar contrataciones fantásticas sin problemas adicionales. La plataforma FireWork puede ayudarlo a comenzar a realizar excelentes tratos con sus clientes hoy mismo, de esta manera podrá administrar su trabajo como freelancer de la mejor forma.</p>
+                        <p className='text-about-two'>Creamos FireWork después de escuchar a innumerables empleados y ejecutivos de recursos humanos lamentarse por la falta de una solución simple y económica que permitiera a sus equipos de recursos humanos realizar contrataciones fantásticas sin problemas adicionales. La plataforma FireWork puede ayudarlo a comenzar a realizar excelentes tratos con sus clientes hoy mismo, de esta manera podrá administrar su trabajo como freelancer o como cliente de la mejor forma.</p>
                     </div>
                 </div>
 

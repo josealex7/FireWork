@@ -1,5 +1,5 @@
 import React from 'react';
-import { ContainerPrincipal, LogoContainer, ContainerButtons, Button1, Button2, ImgLogo } from "../../styles/NavBarDos.elements";
+import { ContainerPrincipal, LogoContainer, ContainerButtons, ContainerAbout, Button1, Button2, ImgLogo } from "../../styles/NavBarDos.elements";
 import { Link } from "react-router-dom";
 
 const NavBarDos = () => {
@@ -12,6 +12,12 @@ const NavBarDos = () => {
                 </LogoContainer>
 
                 <ContainerButtons>
+                    <Link to="/ayuda" className='link'>
+                        <ContainerAbout>
+                            ¿Cómo funciona FireWork?
+                        </ContainerAbout>
+                    </Link>
+                
                     <Button1>
                         <Link to="/login" className='link'>
                             Ingresa

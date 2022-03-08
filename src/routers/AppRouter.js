@@ -12,6 +12,7 @@ import { PublicRoute } from "./PublicRoute";
 import { getAuth,onAuthStateChanged } from "firebase/auth";
 import NavBarDos from "../components/header/NavBarDos";
 import Footer from '../components/footer/Footer';
+import BackToTop from '../components/footer/BackToTop';
 import Loading from '../components/loading/Loading';
 import HomeOne from "../pages/HomeOne";
 import Spinner from "../components/accesorios/Spinner";
@@ -67,6 +68,7 @@ if(checking){
                     <PublicRoute isAuthenticated={isLoggedIn}>
                         <NavBarDos />
                         <HomeOne />
+                        <BackToTop />
                         <Footer />
                     </PublicRoute>
                 } />
@@ -95,7 +97,7 @@ if(checking){
                         <DashboardRoutes/>
                     </PrivateRoute>
                 }/>
-        </Routes>
+      </Routes>
     </Router>
   );
 }

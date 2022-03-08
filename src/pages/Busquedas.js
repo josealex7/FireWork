@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { Link, useNavigate } from "react-router-dom";
 import { categoryProjectAsync, showDetailProjectAsync } from '../actions/actionProyectos';
 import { FaArrowLeft, FaHeart } from "react-icons/fa";
+import '../components/list/styleslistarAll.css';
 
 const Busquedas = () => {
 
@@ -18,7 +19,7 @@ const Busquedas = () => {
     }, []);
     
     return (
-        <section>
+        <section className='first-container-all'>
 
             <Link to="/home" >
                 <button className="container-regresar">

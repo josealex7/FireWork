@@ -49,6 +49,17 @@ export const ContainerButtons = styled.div`
   }
 `
 
+export const ContainerAbout = styled.p`
+  width: 695px;
+  height: 32px;
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  align-items: center;
+  margin-right: 80px;
+  font-weight: bold;
+`
+
 export const Button1 = styled.button`
   border: none;
   border-radius: 10px;
