@@ -1,0 +1,60 @@
+.ContenedorContacto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    padding-top: 40px;
+}
+
+.contenedor-Formulario {
+    margin: auto;
+    max-width: 600px;
+    padding: 0px 20px;
+    min-width: 200px;
+    margin-bottom: -20px;
+}
+
+.botonEnviar {
+    height: 50px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.contact-form {
+    max-width: 540px;
+    margin: auto;
+}
+
+/* regresar ------------------------------------- */
+.container-regresar-details {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    position: absolute;
+    margin-top: 30px;
+    border: none;
+    background: #fff;
+    margin-left: -625px;
+    font-size: 14px;
+    padding: 3px 10px;
+}
+
+.container-regresar-details:hover {
+    cursor: pointer;
+}
+
+.container-icon-regresar-details {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-right: 10px;
+}
+
+.regresar-details {
+    font-weight: bold;
+    color: #000000;
+}

@@ -4,6 +4,7 @@ import { useDispatch } from 'react-redux';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { searchProjectAsync } from '../../../actions/actionProyectos';
+import { searchServiceAsync } from '../../../actions/actionServices';
 import { FaSearch } from "react-icons/fa";
 import './UserPerfil.css';
 
@@ -11,7 +12,7 @@ import SearchIcon from '@mui/icons-material/Search';
 import InputBase from '@mui/material/InputBase';
 import { styled, alpha } from '@mui/material/styles';
 
-const Search = styled('div')(({ theme }) => ({
+const Search = styled('form')(({ theme }) => ({
   position: 'relative',
   borderRadius: theme.shape.borderRadius,
   backgroundColor: alpha(theme.palette.common.white, 0.15),
@@ -67,7 +68,8 @@ const SearchWords = () => {
             search: Yup.string().required()
         }),
         onSubmit: ({ search }) => {
-            dispatch(searchProjectAsync(search))
+          dispatch(searchProjectAsync(search))
+          dispatch(searchServiceAsync(search))
             //console.log(search);
             history("/busqueda")
         }
@@ -76,7 +78,7 @@ const SearchWords = () => {
     return (
       <div>
 
-          <Search>
+          <Search onSubmit={formik.handleSubmit}>
             <SearchIconWrapper>
               <SearchIcon />
             </SearchIconWrapper>

@@ -6,10 +6,10 @@ export const FirstContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 98%;
+  width: 80%;
   height: 100vh;
   margin-bottom: 100px;
-  margin-left: 10px;
+  margin-left: 125px;
 `
 
 export const TitleCarouselTwo = styled.h2`

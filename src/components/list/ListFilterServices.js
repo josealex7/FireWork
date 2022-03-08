@@ -1,19 +1,18 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { listCategoriesAsync, searchProjectAsync, listProjectAsync } from '../../actions/actionProyectos';
+import { listCategoriesAsync, searchServiceAsync, listServiceAsync } from '../../actions/actionServices';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { FaSearch } from "react-icons/fa";
 import './styleslistarAll.css';
 
-const ListFilters = () => {
+const ListFilterServices = () => {
 
     const dispatch = useDispatch();
 
     const { categories } = useSelector((store) => store.categories);
     console.log(categories);
     
-
     useEffect(() => {
         dispatch(listCategoriesAsync());
     }, []);
@@ -27,13 +26,14 @@ const ListFilters = () => {
             search: Yup.string().required()
         }),
         onSubmit: ({ search }) => {
-            dispatch(searchProjectAsync(search))
+            dispatch(searchServiceAsync(search))
             //console.log(search);
         }
     })
 
     return (
         <div className='first-container-filter'>
+            
             <div className='container-title-filter'>
                 <h3 className='title-filter'>Filtro de búsqueda</h3>
             </div>
@@ -92,7 +92,7 @@ const ListFilters = () => {
                             value="all"
                             id="all"
                             onClick={() => {
-                                dispatch(listProjectAsync())
+                                dispatch(listServiceAsync())
                             }}
                         />
                             Todos
@@ -112,20 +112,20 @@ const ListFilters = () => {
                                     value={e.id}
                                     id={e.id}
                                     onClick={() => {
-                                        dispatch(searchProjectAsync(e.id))
+                                        dispatch(searchServiceAsync(e.id))
                                     }}
                                 />
                                 {e.category}
                             </label>
                         ))}
-                            <label>
+                        <label>
                                 <input
                                     className="checkbox-filter"
                                     type="checkbox"
                                     value="all"
                                     id="all"
                                     onClick={() => {
-                                        dispatch(listProjectAsync())
+                                        dispatch(listServiceAsync())
                                     }}
                                 />
                                 Todas
@@ -137,4 +137,4 @@ const ListFilters = () => {
     )
 };
 
-export default ListFilters;
+export default ListFilterServices;

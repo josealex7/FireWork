@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { listServiceAsync, showDetailServiceAsync } from '../../actions/actionServices';
 import { Link, useNavigate } from "react-router-dom";
 import { FaArrowLeft, FaHeart } from "react-icons/fa";
-import ListFilters from './ListFilters';
+import ListFilterServices from './ListFilterServices';
 import './styleslistarAll.css';
 
 const ListAllServices = () => {
@@ -34,11 +34,12 @@ const ListAllServices = () => {
 
             <div className='container-second-all'>
                 <div className='container-filter-in-all'>
-                    <ListFilters />
+                    <ListFilterServices />
                 </div>
 
                 <div className='container-all-cards'>
                     {services.map((e, i) => (
+                        <Link to={"/detail-service/" + e.tituloservice} className="links">
                         <div key={i} className="card-all-projects">
                             <div
                                 className="card-part-one"
@@ -68,6 +69,7 @@ const ListAllServices = () => {
                                 </div>
                             </div>
                         </div>
+                        </Link>
                     ))}
                     
                 </div>

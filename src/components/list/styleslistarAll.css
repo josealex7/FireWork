@@ -31,6 +31,29 @@
     width: 300px;
 }
 
+.input-search-filter {
+    margin: 5px 0px 10px -20px;
+    width: 250px;
+    height: 25px;
+    border: 1px solid gray;
+    border-radius: 2px 0px 0px 2px;
+}
+
+.btn-search-filter {
+    margin: 0px 0px 10px 0px;
+    height: 30px;
+    border: 1px solid gray;
+    border-radius: 0px 2px 2px 0px;
+}
+
+.checkbox-filter {
+    margin: 4px 5px;
+}
+
+.checkbox-filter-two {
+    margin-bottom: 15px;
+}
+
 /* TODOS ------------------------------------------------------------------------------------ */
 .first-container-all {
     display: flex;

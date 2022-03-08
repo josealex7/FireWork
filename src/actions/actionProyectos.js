@@ -2,35 +2,6 @@ import { typesProyectos } from '../types/types';
 import { addDoc, collection, getDocs, query, where, doc, deleteDoc } from "@firebase/firestore";
 import { db } from '../firebase/firebaseConfig';
 
-//CATEGORIES Project ---------------------------------------------
-
-//Action CATEGORY Project Async
-export const categoryProjectAsync = (categoria) => {
-
-    return async (dispatch) => {
-        const projCollections = collection(db, "proyectos");
-        const q = query(projCollections, where("category", "==", categoria))
-        const datos = await getDocs(q);
-        //console.log(datos);
-
-        const proyecto = [];
-        datos.forEach((doc) => {
-            proyecto.push(doc.data())
-        })
-        //console.log(proyecto);
-        dispatch(categoryProjectSync(proyecto))
-    }
-}
-
-//Action Category Product Sync
-export const categoryProjectSync = (categoria) => {
-    return {
-        type: typesProyectos.category,
-        payload: categoria
-    }
-}
-
-
 
 
 //LIST CATEGORIES ---------------------------------------------
@@ -67,6 +38,35 @@ export const listCategoriesSync = (categories) => {
 
 
 
+//CATEGORY Project ---------------------------------------------
+
+//Action CATEGORY Project Async
+export const categoryProjectAsync = (categoria) => {
+
+    return async (dispatch) => {
+        const projCollections = collection(db, "proyectos");
+        const q = query(projCollections, where("category", "==", categoria))
+        const datos = await getDocs(q);
+        //console.log(datos);
+
+        const proyecto = [];
+        datos.forEach((doc) => {
+            proyecto.push(doc.data())
+        })
+        //console.log(proyecto);
+        dispatch(categoryProjectSync(proyecto))
+    }
+}
+
+//Action Category Product Sync
+export const categoryProjectSync = (categoria) => {
+    return {
+        type: typesProyectos.category,
+        payload: categoria
+    }
+}
+
+
 
 
 //SEARCH Project ---------------------------------------------
@@ -76,7 +76,7 @@ export const searchProjectAsync = (categoria) => {
 
     return async (dispatch) => {
         const projCollections = collection(db, "proyectos");
-        const q = query(projCollections, where("category", "==", categoria))
+        const q = query(projCollections, where("categoria", "==", categoria))
         const datos = await getDocs(q);
         //console.log(datos);
 

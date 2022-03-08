@@ -41,7 +41,9 @@ const DetailProject = () => {
 
                             <div className="container-btns-details">
                                 <button className='btn-details-one'>Aplicar al proyecto</button>
-                                <button className='btn-details-two'>Contactar para consulta</button>
+                                <Link to="/contact">
+                                    <button className='btn-details-two'>Contactar para consulta</button>
+                                </Link>
                             </div>
                         </div>
                     </div>

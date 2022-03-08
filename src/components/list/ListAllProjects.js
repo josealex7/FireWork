@@ -1,19 +1,18 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { listProjectAsync, showDetailProjectAsync } from '../../actions/actionProyectos';
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { FaArrowLeft, FaHeart } from "react-icons/fa";
 import ListFilters from './ListFilters';
 import './styleslistarAll.css';
 
 const ListAllProjects = () => {
 
-    let history = useNavigate();
-
     const dispatch = useDispatch();
 
     const { projects } = useSelector((store) => store.projects);
     //console.log(projects);
+    const { categories } = useSelector((store) => store.categories);
 
     useEffect(() => {
         dispatch(listProjectAsync());
@@ -37,14 +36,19 @@ const ListAllProjects = () => {
                     <ListFilters />
                 </div>
 
+                {categories.length === 0 ?
+                    <div>
+                        <h2>No hay proyectos registrados en esta categoría.</h2>
+                    </div>
+                    :
                 <div className='container-all-cards'>
                     {projects.map((e, i) => (
+                        <Link to={"/details-project/" + e.titleproject} className="links">
                         <div key={i} className="card-all-projects">
                             <button
                                 className="card-part-one"
                                 onClick={() => {
                                     dispatch(showDetailProjectAsync(e.titleproject))
-                                    history("/detail-project")
                                 }}
                             >
                                 <div className="container-banner-all-projects">
@@ -65,9 +69,11 @@ const ListAllProjects = () => {
                                 <p className="info-pago-oferta-card-all">Pago de <span className="precio-oferta-card-all">{e.pagoproject}$</span></p>
                             </div>
                         </div>
+                        </Link>
                     ))}
                     
                 </div>
+                }
             </div>
         </div>
     )

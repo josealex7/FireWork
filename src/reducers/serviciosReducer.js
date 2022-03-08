@@ -21,20 +21,20 @@ export const serviciosReducer = (state = initialState, action) => {
         //         services: state.services.filter(serv => serv.codeproject !== action.payload)
         //     }
         
-        // case typesServices.search:
-        //     return {
-        //         services: action.payload
-        //     }
+        case typesServices.search:
+            return {
+                services: action.payload
+            }
         
         case typesServices.detail:
             return {
                 services: action.payload
             }
 
-        // case typesServices.category:
-        //     return {
-        //         services: state.services.filter((serv) => serv.categoryproject === action.payload)
-        //     }
+        case typesServices.category:
+            return {
+                services: state.services.filter((serv) => serv.category === action.payload)
+            }
     
         default:
             return state;

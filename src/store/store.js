@@ -6,6 +6,7 @@ import { proyectosReducer } from '../reducers/proyectosReducer';
 import { serviciosReducer } from '../reducers/serviciosReducer';
 import { usuarioReducer } from '../reducers/usuarioReducer';
 import { testReducer } from '../reducers/testReducer';
+import { categoriesReducer } from '../reducers/categoriesReducer';
 
 const composeEnhancers = (typeof window !== 'undefined' && 
 window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__) || compose;
@@ -16,7 +17,8 @@ const reducers = combineReducers({
     projects: proyectosReducer,
     services: serviciosReducer,
     usuario: usuarioReducer,
-    test: testReducer
+    test: testReducer,
+    categories: categoriesReducer,
 })
 
 

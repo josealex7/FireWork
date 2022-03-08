@@ -1,36 +1,7 @@
 import { typesServices } from '../types/types';
+import { typesProyectos } from '../types/types';
 import { addDoc, collection, getDocs, query, where, doc, deleteDoc } from "@firebase/firestore";
 import { db } from '../firebase/firebaseConfig';
-
-//CATEGORIES Service ---------------------------------------------
-
-//Action CATEGORY Service Async
-export const categoryServiceAsync = (category) => {
-
-    return async (dispatch) => {
-        const servCollections = collection(db, "servicios");
-        const q = query(servCollections, where("categoryproject", "==", category))
-        const datos = await getDocs(q);
-        //console.log(datos);
-
-        const servicio = [];
-        datos.forEach((doc) => {
-            servicio.push(doc.data())
-        })
-        //console.log(servicio);
-        dispatch(categoryServiceSync(servicio))
-    }
-}
-
-//Action Category Service Sync
-export const categoryServiceSync = (category) => {
-    return {
-        type: typesServices.category,
-        payload: category
-    }
-}
-
-
 
 
 //LIST CATEGORIES ---------------------------------------------
@@ -59,7 +30,7 @@ export const categoryServiceSync = (category) => {
 //Action List Service Sync
 export const listCategoriesSync = (categories) => {
     return {
-        type: typesServices.categories,
+        type: typesProyectos.categories,
         payload: categories
     }
 }
@@ -67,16 +38,45 @@ export const listCategoriesSync = (categories) => {
 
 
 
+//CATEGORY Service ---------------------------------------------
+
+//Action CATEGORY Service Async
+export const categoryServiceAsync = (categoria) => {
+
+    return async (dispatch) => {
+        const servCollections = collection(db, "servicios");
+        const q = query(servCollections, where("category", "==", categoria))
+        const datos = await getDocs(q);
+        //console.log(datos);
+
+        const servicio = [];
+        datos.forEach((doc) => {
+            servicio.push(doc.data())
+        })
+        console.log(servicio);
+        dispatch(categoryServiceSync(servicio))
+    }
+}
+
+//Action Category Service Sync
+export const categoryServiceSync = (category) => {
+    return {
+        type: typesServices.category,
+        payload: category
+    }
+}
+
+
 
 
 //SEARCH Service ---------------------------------------------
 
 //Action Search Service Async
-export const searchServiceAsync = (service) => {
+export const searchServiceAsync = (categoria) => {
 
     return async (dispatch) => {
         const servCollections = collection(db, "servicios");
-        const q = query(servCollections, where("categoryproject", "==", service))
+        const q = query(servCollections, where("categoria", "==", categoria))
         const datos = await getDocs(q);
         //console.log(datos);
 

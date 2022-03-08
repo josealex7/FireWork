@@ -8,7 +8,7 @@ const CarouselOne = () => {
 
             <TitleCarouselTwo>Categorías</TitleCarouselTwo>
 
-            <Carousel itemsToShow={5} pagination={false}>
+            <Carousel itemsToShow={4} pagination={false}>
                 
                 <ContainerImgsCarousel>
                     <ContainerImgCarousel>
