@@ -13,7 +13,7 @@ const ListAllServices = () => {
     const dispatch = useDispatch();
 
     const { services } = useSelector((store) => store.services);
-    console.log(services);
+    //console.log(services);
 
     useEffect(() => {
         dispatch(listServiceAsync());

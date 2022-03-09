@@ -4,6 +4,72 @@ import { addDoc, collection, getDocs, query, where, doc, deleteDoc } from "@fire
 import { db } from '../firebase/firebaseConfig';
 
 
+
+//LIST DESTACADSOS ---------------------------------------------
+
+//Action List DESTACADSOS Async
+ export const listDestacadosAsync = () => {
+     return async (dispatch) => {
+
+         const querySnapshot = await getDocs(collection(db, "destacados"));
+         //console.log(querySnapshot);
+
+         const featured = [];
+         querySnapshot.forEach((doc) => {
+            //console.log(doc);
+            //console.log(doc.data());
+            featured.push({
+                ...doc.data()
+            })
+         });
+         //console.log(featured);
+         dispatch(listDestacadosSync(featured));
+     }
+ }
+
+
+//Action List Service Sync
+export const listDestacadosSync = (destacado) => {
+    return {
+        type: typesProyectos.featured,
+        payload: destacado
+    }
+}
+
+
+
+//SEARCH Services DESTACADOS ---------------------------------------------
+
+//Action Search Services DESTACADOS Async
+export const searchServicesDestAsync = (featuring) => {
+
+    return async (dispatch) => {
+        const servCollections = collection(db, "servicios");
+        const q = query(servCollections, where("featuring", "==", featuring))
+        const datos = await getDocs(q);
+        //console.log(datos);
+
+        const servicio = [];
+        datos.forEach((doc) => {
+            servicio.push(doc.data())
+        })
+        //console.log(servicio);
+        dispatch(searchServicesDestSync(servicio))
+    }
+}
+
+//Action Search Project DESTACADOS Sync
+export const searchServicesDestSync = (service) => {
+    return {
+        type: typesProyectos.match,
+        payload: service
+    }
+}
+
+
+
+
+
 //LIST CATEGORIES ---------------------------------------------
 
 //Action List CATEGORIES Async
@@ -53,7 +119,7 @@ export const categoryServiceAsync = (categoria) => {
         datos.forEach((doc) => {
             servicio.push(doc.data())
         })
-        console.log(servicio);
+        //console.log(servicio);
         dispatch(categoryServiceSync(servicio))
     }
 }
@@ -113,7 +179,7 @@ export const showDetailServiceAsync = (titulo) => {
         datos.forEach((doc) => {
             servicio.push(doc.data())
         })
-        console.log(servicio);
+        //console.log(servicio);
         dispatch(showDetailServiceSync(servicio))
     }
 }

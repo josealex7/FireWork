@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { listCategoriesAsync, searchProjectAsync, listProjectAsync } from '../../actions/actionProyectos';
+import { listCategoriesAsync, searchProjectAsync, listProjectAsync, listDestacadosAsync, searchProjectDestAsync } from '../../actions/actionProyectos';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { FaSearch } from "react-icons/fa";
@@ -11,11 +11,15 @@ const ListFilters = () => {
     const dispatch = useDispatch();
 
     const { categories } = useSelector((store) => store.categories);
-    console.log(categories);
+    //console.log(categories);
+
+    const { featured } = useSelector((store) => store.featured);
+    //console.log(featured);
     
 
     useEffect(() => {
         dispatch(listCategoriesAsync());
+        dispatch(listDestacadosAsync());
     }, []);
 
     // FORM -------------------------------------------
@@ -66,25 +70,20 @@ const ListFilters = () => {
             <div className='container-items-categorias'>
                 <h4 className='title-categories-filter'>Destacados y menos destacados</h4>
                 <div className="categories-checkbox-filter">
-                    
-                    <label>
+                    {featured.map((e, i) => (
+                    <label key={i}>
                         <input
                             className="checkbox-filter"
                             type="checkbox"
-                            value="all"
-                            id="all"
+                            value={e.id}
+                            id={e.id}
+                            onClick={() => {
+                                dispatch(searchProjectDestAsync(e.id))
+                            }}
                         />
-                            Más destacados
+                            {e.featuring}
                     </label>
-                    <label>
-                        <input
-                            className="checkbox-filter"
-                            type="checkbox"
-                            value="all"
-                            id="all"
-                        />
-                            Menos destacados
-                    </label>
+                    ))}
                     <label>
                         <input
                             className="checkbox-filter checkbox-filter-two"

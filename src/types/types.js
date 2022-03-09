@@ -11,7 +11,9 @@ export const typesProyectos = {
     search: 'search proyecto',
     detail: 'detail proyecto',
     category: 'Category proyecto',
-    categories: 'categories projects'
+    categories: 'categories projects',
+    featured: 'destacados projects',
+    match: 'search destacados',
 }
 
 export const typesServices = {
@@ -21,7 +23,9 @@ export const typesServices = {
     search: 'search service',
     detail: 'detail servicio',
     category: 'Category servicio',
-    categories: 'categories services'
+    categories: 'categories services',
+    featured: 'destacados projects',
+    match: 'search destacados',
 }
 
 export const types_Usuario = {

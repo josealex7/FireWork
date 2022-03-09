@@ -25,6 +25,11 @@ export const serviciosReducer = (state = initialState, action) => {
             return {
                 services: action.payload
             }
+
+        case typesServices.match:
+            return {
+                services: action.payload
+            }
         
         case typesServices.detail:
             return {

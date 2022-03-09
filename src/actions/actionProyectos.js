@@ -4,6 +4,72 @@ import { db } from '../firebase/firebaseConfig';
 
 
 
+
+//LIST DESTACADOS ---------------------------------------------
+
+//Action List DESTACADOS Async
+ export const listDestacadosAsync = () => {
+     return async (dispatch) => {
+
+         const querySnapshot = await getDocs(collection(db, "destacados"));
+         //console.log(querySnapshot);
+
+         const featured = [];
+         querySnapshot.forEach((doc) => {
+            //console.log(doc);
+            //console.log(doc.data());
+             featured.push({
+                 ...doc.data()
+             })
+         });
+         //console.log(featured);
+         dispatch(listDestacadosSync(featured));
+     }
+ }
+
+
+//Action List Project Sync
+export const listDestacadosSync = (destacado) => {
+    return {
+        type: typesProyectos.featured,
+        payload: destacado
+    }
+}
+
+
+
+//SEARCH Project DESTACADOS ---------------------------------------------
+
+//Action Search Project DESTACADOS Async
+export const searchProjectDestAsync = (featuring) => {
+
+    return async (dispatch) => {
+        const projCollections = collection(db, "proyectos");
+        const q = query(projCollections, where("featuring", "==", featuring))
+        const datos = await getDocs(q);
+        //console.log(datos);
+
+        const proyecto = [];
+        datos.forEach((doc) => {
+            proyecto.push(doc.data())
+        })
+        //console.log(proyecto);
+        dispatch(searchProjectSync(proyecto))
+    }
+}
+
+//Action Search Project DESTACADOS Sync
+export const searchProjectDestSync = (project) => {
+    return {
+        type: typesProyectos.match,
+        payload: project
+    }
+}
+
+
+
+
+
 //LIST CATEGORIES ---------------------------------------------
 
 //Action List CATEGORIES Async
@@ -113,7 +179,7 @@ export const showDetailProjectAsync = (title) => {
         datos.forEach((doc) => {
             proyecto.push(doc.data())
         })
-        console.log(proyecto);
+        //console.log(proyecto);
         dispatch(showDetailProjectSync(proyecto))
     }
 }
