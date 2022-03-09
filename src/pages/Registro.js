@@ -71,7 +71,7 @@ export const Registro = () => {
         <div className='contenedorPrincipal'>
         <div className='contenedorForm'>
             <form onSubmit={handleRegistro}>
-                <Typography variant="h5" align={'center'} sx={{ mb   : 3 }} className='tituloLogin'>Registrate gratis en FireWork </Typography>
+                <Typography variant="h5" align={'center'} sx={{ mb   : 3 }} className='tituloLogin'>Regístrate gratis en FireWork </Typography>
 
                 <TextField sx={{ mb:2 ,width: '100%' }} id="filled-basic" label="Nombre  " variant="outlined" required 
                         type="text"
@@ -139,7 +139,7 @@ export const Registro = () => {
 
                 <Button variant="contained" type="submit" size="large" sx={{ mb   : 3, width: '100%' }} style={{backgroundColor:"#5C7AEA"}}>Registrarse</Button>
                 <Typography variant="h6" align={'center'}  sx={{ mb   : 3 }}>
-                    ¡Tambien puedes registrarte con Google o Facebook!
+                    ¡También puedes registrarte con Google o Facebook!
                 </Typography>
                 <div className='contenedorLogin'>
                     <div className='contenedorGoogle'>
@@ -148,7 +148,7 @@ export const Registro = () => {
                                 <div className="google-icon-wrapper">
                                     <img className="google-icon" src="https://upload.wikimedia.org/wikipedia/commons/5/53/Google_%22G%22_Logo.svg" alt="google button" />
                                     <div className='contenedorTexto'>
-                                        <Typography className='textoAcceso' variant="h5 " align={'right'}>Registrate con Google</Typography>
+                                        <Typography className='textoAcceso' variant="h5 " align={'right'}>Regístrate con Google</Typography>
                                     </div>
                                 </div> 
                             </div>
@@ -166,7 +166,7 @@ export const Registro = () => {
                                     <img className="google-icon" src="https://res.cloudinary.com/app-firework1/image/upload/v1640797865/logo/58e919b0eb97430e819064ff_owau9l.png" alt="google button" />
                                     
                                     <div className='contenedorTexto'>
-                                        <Typography className='textoAcceso' variant="h5 " align={'right'}>Registrate con Facebook</Typography>
+                                        <Typography className='textoAcceso' variant="h5 " align={'right'}>Regístrate con Facebook</Typography>
                                     </div>
                                 </div>
                             </div>

@@ -19,7 +19,7 @@ const Perfil = () => {
   dispatch(ListarUsuarioAsync());
 
   const { datosUsuario } = useSelector((store) => store.usuario);
-  const { test } = useSelector((store) => store.test);
+  // const { test } = useSelector((store) => store.test);
 
   const useUser = User();
 
@@ -120,6 +120,7 @@ const Perfil = () => {
                 <img
                   className="imagenColombia"
                   src="https://res.cloudinary.com/app-firework1/image/upload/v1646191805/Flag_of_Colombia_tfswhg.png"
+                  alt="bandera colombia"
                 />
                 <span className="pais">Colombia</span>
               </div>
@@ -175,8 +176,12 @@ const Perfil = () => {
           </div>
         </form>
         <div>
-          <h1 className="componente_test">Insignias adquiridas</h1>
-          {
+          <h2 className="componente_test">Insignias adquiridas</h2>
+
+          <div>
+              <p className="cero-insignias">Aún no haz adquirido ninguna insignia</p>
+            </div>
+          {/* {
             test != undefined?
             <div>
               {
@@ -192,7 +197,7 @@ const Perfil = () => {
             <div>
               <h1>Aún no haz adquirido ninguna insignia</h1>
             </div>
-          }
+          } */}
         </div>
       </div>
     </>

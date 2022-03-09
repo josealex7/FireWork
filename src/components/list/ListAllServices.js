@@ -1,8 +1,9 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { listServiceAsync, showDetailServiceAsync } from '../../actions/actionServices';
+import { addFavoritesServSync } from '../../actions/actionFavoritos';
 import { Link, useNavigate } from "react-router-dom";
-import { FaArrowLeft, FaHeart } from "react-icons/fa";
+import { FaArrowLeft, FaHeart, FaStar } from "react-icons/fa";
 import ListFilterServices from './ListFilterServices';
 import './styleslistarAll.css';
 
@@ -39,8 +40,9 @@ const ListAllServices = () => {
 
                 <div className='container-all-cards'>
                     {services.map((e, i) => (
-                        <Link to={"/detail-service/" + e.tituloservice} className="links">
+                        
                         <div key={i} className="card-all-projects">
+                            <Link to={"/detail-service/" + e.tituloservice} className="links">
                             <div
                                 className="card-part-one"
                                 onClick={() => {
@@ -54,11 +56,23 @@ const ListAllServices = () => {
                                 <div className="container-title-card-all">
                                     <p className="title-card-all">{e.tituloservice}</p>
                                 </div>
+
+                                <div className="container-rate-card-all-services">
+                                    <p className={e.featuring === 'Más destacados' ? 'good' : 'bad'}><FaStar /></p>
+                                    <p className={e.featuring === 'Más destacados' ? 'good' : 'bad'}><FaStar /></p>
+                                    <p className={e.featuring === 'Más destacados' ? 'good' : 'bad'}><FaStar /></p>
+                                    <p className={e.featuring === 'Más destacados' ? 'good' : 'bad'}><FaStar /></p>
+                                    <p className={e.featuring === 'Más destacados' ? 'good' : 'bad'}><FaStar /></p>
+                                </div>
                             </div>
+                            </Link>
                             <div className="card-part-two">
                                 <button
                                     className="btn-fav-project-all"
                                     id={e.tituloservice}
+                                    onClick={() => 
+                                        dispatch(addFavoritesServSync(e))
+                                    }
                                 >
                                     <FaHeart />
                                 </button>
@@ -69,7 +83,7 @@ const ListAllServices = () => {
                                 </div>
                             </div>
                         </div>
-                        </Link>
+                        
                     ))}
                     
                 </div>

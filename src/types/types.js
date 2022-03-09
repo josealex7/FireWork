@@ -38,3 +38,16 @@ export const types_Test = {
     enviar: 'enviar',
     obtener: 'obtener'
 }
+
+//Types FAVORITES
+export const typesFavorites = {
+    addfavorites: 'Add to Favorites',
+    removeone: 'Remove One',
+    removeall: 'Remove All',
+}
+
+export const typesFavoritesTwo = {
+    addfavoritesserv: 'Add to Favorites',
+    removeone: 'Remove One',
+    removeall: 'Remove All',
+}

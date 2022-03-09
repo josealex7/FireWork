@@ -1,19 +1,20 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-//import { listServiceAsync } from '../../actions/actionServices';
 import { Link } from "react-router-dom";
-import { FaArrowLeft, FaHeart } from "react-icons/fa";
+import { FaArrowLeft, FaHeart, FaStar } from "react-icons/fa";
+
+import { showDetailProjectAsync, listProjectAsync } from '../../actions/actionProyectos';
 import './styleslistarAll.css';
 
 const ListFavorites = () => {
 
     const dispatch = useDispatch();
-
-    const { services } = useSelector((store) => store.services);
-    console.log(services);
+  
+    const { favorite } = useSelector((store) => store.favorite);
+    //console.log(favorite);
 
     useEffect(() => {
-        //dispatch(listServiceAsync());
+        dispatch(listProjectAsync());
     }, []);
 
     return (
@@ -29,40 +30,66 @@ const ListFavorites = () => {
                 </button>
             </Link>
 
-            <div className='container-second-all'>
+            <div className='container-all-favorites border-bottom-favorites'>
                 <div className='container-filter-in-all'>
-                    <h1>Mis favoritos</h1>
+                    <h1 className='container-title-favorites'>Favoritos</h1>
                 </div>
 
+                {favorite.length === 0 ?
+                    <div>
+                        <h2 className='container-subtitle-favorites'>No tienes proyectos favoritos</h2>
+                    </div>
+                    :
+                    <div>
+                        <h2 className='container-subtitle-favorites'>Mis proyectos favoritos</h2>
+                    </div>
+                }
+
                 <div className='container-all-cards'>
-                    {services.map((e, i) => (
-                        <div key={i} className="card-all-projects">
-                            <div className="card-part-one">
+                    
+                    {favorite.map((fav) => (
+                        <Link to={"/details-project/" + fav.titleproject} className="links">
+                        <div key={fav.titleproject} className="card-all-projects">
+                            <button
+                                className="card-part-one"
+                                onClick={() => {
+                                    dispatch(showDetailProjectAsync(fav.titleproject))
+                                }}
+                            >
                                 <div className="container-banner-all-projects">
-                                    <img src={e.banner} alt="banner" title="Banner" className="banner-all-projects" />
+                                    <img src={fav.oneimage} alt="banner" title="Banner" className="banner-all-projects" />
                                 </div>
                                 <div className="container-title-card-all">
-                                    <p className="title-card-all">{e.tituloservice}</p>
+                                    <p className="title-card-all">{fav.titleproject}</p>
                                 </div>
-                            </div>
+                                <div className="container-rate-card-all">
+                                    <p className={fav.featuring === 'Más destacados' ? 'good' : 'bad'}><FaStar /></p>
+                                    <p className={fav.featuring === 'Más destacados' ? 'good' : 'bad'}><FaStar /></p>
+                                    <p className={fav.featuring === 'Más destacados' ? 'good' : 'bad'}><FaStar /></p>
+                                    <p className={fav.featuring === 'Más destacados' ? 'good' : 'bad'}><FaStar /></p>
+                                    <p className={fav.featuring === 'Más destacados' ? 'good' : 'bad'}><FaStar /></p>
+                                </div>
+                            </button>
                             <div className="card-part-two">
                                 <button
                                     className="btn-fav-project-all"
-                                    id={e.tituloservice}
+                                    id={fav.titleproject}
+                                    // onClick={() => 
+                                    //     dispatch(addFavoritesSync(e))
+                                    // }
                                 >
                                     <FaHeart />
                                 </button>
 
-                                <div className='container-pago-all'>
-                                    <p className="info-pago-oferta-card-all">Pago entre:</p>
-                                    <p className="precio-oferta-card-all">{e.rangopreciomin}$ <span className="info-pago-oferta-card-all">y</span> {e.rangopreciomax}$</p>
-                                </div>
+                                <p className="info-pago-oferta-card-all">Pago de <span className="precio-oferta-card-all">{fav.pagoproject}$</span></p>
                             </div>
                         </div>
+                        </Link>
                     ))}
                     
                 </div>
             </div>
+
         </div>
     )
 };

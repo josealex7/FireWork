@@ -9,7 +9,10 @@ html, body {
     border: 1px solid rgba(163, 36, 36, 0.89);
     background-color: rgb(211, 40, 40);
     margin-right: 4px;
-    
+}
+
+.contenedorGoogle:hover{
+    cursor: pointer;
 }
 
 .contenedorFacebook{
@@ -19,6 +22,10 @@ html, body {
     border: 1px solid rgb(16, 16, 223);
     background-color: #3D56B2;
     margin-left: 4px;
+}
+
+.contenedorFacebook:hover{
+    cursor: pointer;
 }
 
 .google-icon{

@@ -108,7 +108,7 @@ function Login() {
                 <Typography  variant="h6" align={'center'}  sx={{ mt   : 3 }}>
                     ¿No tienes una cuenta?
                     <Link to="/registro" className='linksRegistrate'>
-                        Registrate aquí
+                        Regístrate aquí
                     </Link>
                 </Typography>
                 <div className='contenedorLogin'>

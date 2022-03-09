@@ -1,5 +1,6 @@
 import React from 'react';
 import Services from '../components/home/itemsHomeDos/Services';
+//import UltimosAgregados from '../components/ultimos/UltimosAgregados';
 import InviteToTest from '../components/home/itemsHomeDos/InviteToTest';
 import '../components/home/itemsHomeDos/stylesHomeTwo.css';
 import { useDispatch } from 'react-redux';
@@ -16,6 +17,7 @@ const HomeTwo = () => {
         <div className='container-home-two'>
             <div className='capa-white-home-two'>
                 <Services />
+                {/* <UltimosAgregados /> */}
                 <InviteToTest />
             </div>
         </div>

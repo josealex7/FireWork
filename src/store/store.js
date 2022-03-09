@@ -8,6 +8,8 @@ import { usuarioReducer } from '../reducers/usuarioReducer';
 import { testReducer } from '../reducers/testReducer';
 import { categoriesReducer } from '../reducers/categoriesReducer';
 import { destacadosReducer } from '../reducers/destacadosReducer';
+import { favoriteReducer } from '../reducers/favoritesReducer';
+import { favoriteServReducer } from '../reducers/favoritesServReducer';
 
 const composeEnhancers = (typeof window !== 'undefined' && 
 window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__) || compose;
@@ -21,6 +23,8 @@ const reducers = combineReducers({
     test: testReducer,
     categories: categoriesReducer,
     featured: destacadosReducer,
+    favorite: favoriteReducer,
+    favoritev: favoriteServReducer,
 })
 
 
