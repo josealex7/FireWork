@@ -49,7 +49,7 @@ Nota 2: para cambiar estos datos es necesario contar con una cuenta de developer
 
 ## 🔍 Vistas 
 
-
+<img width="80%" align="center" alt="vistas" src="https://media.giphy.com/media/IJsUj2VzqFZlx2Y3Vq/giphy.gif" />
 
 ## 🌟 Autores
 
