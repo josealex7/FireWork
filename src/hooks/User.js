@@ -7,6 +7,7 @@ const User = () => {
 
     const [value, setValue] = useState({});
 
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     const datosUser = () =>{
         if (user !== null) {
                 setValue({
@@ -21,7 +22,7 @@ const User = () => {
 
     useEffect(() => {
         datosUser()
-    }, [])
+    }, [datosUser])
 
     return value
 }
