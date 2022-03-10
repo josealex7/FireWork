@@ -1,70 +1,62 @@
-# Getting Started with Create React App
+# 🌍 FireWork
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<img width="35%" align="right" style="margin-right:5%" alt="logo" src="https://res.cloudinary.com/app-firework1/image/upload/v1640799731/logo/Logo2_csgze7.png" />
 
-## Available Scripts
+## 📌 ¿Qué es FireWork? 
 
-In the project directory, you can run:
+FireWork es una plataforma para busqueda y publicacion de trabajos freelance. 
 
-### `npm start`
+## Puede visitar FireWork aquí: 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+![home1](https://user-images.githubusercontent.com/88461234/157147065-90b53085-e709-46dc-a6f5-139dcdf8ffb2.png)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+    
+# 💎 FireWork Proyecto
 
-### `npm test`
+Para la creación del proyecto se utilizaron las siguientes herramientas de desarrollo:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+* ```react```
+* ```react-router-dom```
+* ```redux```
+* ```react-redux```
+* ```redux-thunk```
+* ```firebase```
+* ```formik```
+* ```yup```
+* ```styled-components```
+* ```@mui/material```
+* ```@mui/icons-material```
+* ```bootstrap```
+* ```react-bootstrap```
+* ```react-icons```
+* ```react-elastic-carousel```
+* ```react-typing-effect```
+* ```react-spinners```
 
-### `npm run build`
+## 🔥 Descarga del proyecto e Instalación
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+* Clonar el repositorio
+* Abrir el proyecto en Visual Studio Code (o editor de confianza)
+* Abrir la terminal del editor
+* Correr el comando ```npm install``` para instalar correctamente las dependencias del proyecto
+* Para levantar el servidor local se debe correr el comando ```npm start```
+* Se debe tener en cuenta que para la utilización de Firebase, se deben cambiar los datos de la constante firebaseConfig con datos de una cuenta personal de Firebase. Esta constante se encuentra en la siguiente direccion: src > firebase > firebaseConfig.js > firebaseConfig (leer nota 1).
+* De igual modo, se debe cambiar la configuracion dentro de la constante fileUpload con datos personales de Cloudinary. Esta constante se encuentra en la siguiente direccion: src > helpers > FileUpload.js > fileUpload (leer nota 2).
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Nota 1 : para cambiar estos datos es necesario contar con una cuenta en Firebase, crear un nuevo proyecto, y en la opcion de Configuracion del proyecto, encontrara la opcion de aplicaciones web, al selecionar esta ocpion optendra la configuracion del SDK del proyecto, en el SDK encontrara su confirguracion personal de la constante firebaseConfig.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Nota 2: para cambiar estos datos es necesario contar con una cuenta de developer en Cloudinary, obtener la url de la api de cloudinary (a esta url se le debe agregar al final lo siguiente: /upload), ir a la seccion settings, luego a la seccion Upload, y en el apartado de Upload presets, agregar un nuevo Udloap preset, en este paso es necesario darle el nombre que se desee, cambiar el Signing Mode a Unsigned, darle un nombre a la carpeta donde se subiran las imagenes y guardar dicha configuracion. Hacer los cambios respectivos dentro del proyecto con estos datos.
 
-### `npm run eject`
+## 🔍 Vistas 
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+<img width="80%" align="center" alt="vistas" src="https://media.giphy.com/media/IJsUj2VzqFZlx2Y3Vq/giphy.gif" />
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🌟 Autores
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+* **Silvia C. Navarro**  - [@silviajcn](https://github.com/silviajcn)
+* **Alexander Tavera**  - [@josealex7](https://github.com/josealex7)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+![footer](https://user-images.githubusercontent.com/88461234/157147184-3c3407f8-66dd-4405-9b35-04254c199d5f.png)
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
