@@ -15,7 +15,7 @@ const DetailProject = () => {
 
     useEffect(() => {
         dispatch(showDetailProjectAsync())
-    }, []);
+    }, [dispatch]);
 
     return (
         <div className="first-container-details">

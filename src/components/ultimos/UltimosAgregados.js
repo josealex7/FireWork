@@ -19,7 +19,7 @@ const UltimosAgregados = () => {
     useEffect(() => {
         dispatch(listProjectAsync());
         productosRelacionados()
-    }, []);
+    }, [dispatch]);
 
     const productosRelacionados =()=>{
         let contador=0;

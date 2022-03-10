@@ -16,7 +16,7 @@ const DetailService = () => {
 
     useEffect(() => {
         dispatch(showDetailServiceAsync())
-    }, []);
+    }, [dispatch]);
 
     //Image Exchange
     const [imagen, setImagen] = useState();

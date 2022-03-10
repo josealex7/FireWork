@@ -17,7 +17,7 @@ const ListServFav = () => {
 
     useEffect(() => {
         dispatch(listServiceAsync());
-    }, []);
+    }, [dispatch]);
 
     return (
         <>

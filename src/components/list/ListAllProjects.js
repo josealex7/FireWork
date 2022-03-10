@@ -16,7 +16,7 @@ const ListAllProjects = () => {
 
     useEffect(() => {
         dispatch(listProjectAsync());
-    }, []);
+    }, [dispatch]);
 
     return (
         <div className='first-container-all'>

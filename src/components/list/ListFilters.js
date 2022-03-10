@@ -20,7 +20,7 @@ const ListFilters = () => {
     useEffect(() => {
         dispatch(listCategoriesAsync());
         dispatch(listDestacadosAsync());
-    }, []);
+    }, [dispatch]);
 
     // FORM -------------------------------------------
     const formik = useFormik({

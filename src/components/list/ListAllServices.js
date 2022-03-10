@@ -18,7 +18,7 @@ const ListAllServices = () => {
 
     useEffect(() => {
         dispatch(listServiceAsync());
-    }, []);
+    }, [dispatch]);
 
     return (
         <div className='first-container-all'>

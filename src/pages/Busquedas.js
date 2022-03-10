@@ -16,7 +16,7 @@ const Busquedas = () => {
 
     useEffect(() => {
         dispatch(categoryProjectAsync());
-    }, []);
+    }, [dispatch]);
     
     return (
         <section className='first-container-all'>

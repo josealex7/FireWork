@@ -15,7 +15,7 @@ const ListFavorites = () => {
 
     useEffect(() => {
         dispatch(listProjectAsync());
-    }, []);
+    }, [dispatch]);
 
     return (
         <div className='first-container-all'>

@@ -31,7 +31,7 @@ const Contactar = () => {
 
     useEffect(() => {
         dispatch(showDetailProjectAsync())
-    }, []);
+    }, [dispatch]);
     
     return (
         <div>
