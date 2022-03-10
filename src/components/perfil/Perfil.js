@@ -1,5 +1,4 @@
-import { TextField } from "@mui/material";
-import React, { useState } from "react";
+import React from "react";
 import User from "../../hooks/User";
 import * as Yup from "yup";
 import { useFormik } from "formik";
@@ -39,21 +38,21 @@ const Perfil = () => {
             idiomas: Yup.string().required()*/
     }),
     onSubmit: (data) => {
-      if (datosUsuario != null && datosUsuario != undefined) {
+      if (datosUsuario != null && datosUsuario !== undefined) {
         if (datosUsuario != null) {
-          if (data.habilidades == "") {
+          if (data.habilidades === "") {
             data["habilidades"] = datosUsuario.habilidades;
           }
-          if (data.portafolio == "") {
+          if (data.portafolio === "") {
             data["portafolio"] = datosUsuario.portafolio;
           }
-          if (data.sobre_mi == "") {
+          if (data.sobre_mi === "") {
             data["sobre_mi"] = datosUsuario.sobre_mi;
           }
-          if (data.certificaciones == "") {
+          if (data.certificaciones === "") {
             data["certificaciones"] = datosUsuario.certificaciones;
           }
-          if (data.idiomas == "") {
+          if (data.idiomas === "") {
             data["idiomas"] = datosUsuario.idiomas;
           }
           data["id"] = useUser.uid;

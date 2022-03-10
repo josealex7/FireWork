@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useNavigate } from "react-router-dom";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import { logout } from '../../../actions/actionLogin';
 // Material ui
 import IconButton from '@mui/material/IconButton';
@@ -20,6 +20,7 @@ const UserPerfil = () => {
   const useUser = User();
   
   const [auth, setAuth] = React.useState(true);
+  console.log(setAuth);
   const [anchorEl, setAnchorEl] = React.useState(null);
 
   const handleMenu = (event) => {

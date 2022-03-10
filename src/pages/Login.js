@@ -16,13 +16,12 @@ import {TextField,
 import '../styles/style.css'
 import '../styles/login.css'
 import { Link } from "react-router-dom";
-import { Password } from '@mui/icons-material';
 
 function Login() {
 
     const dispatch = useDispatch();
 
-    const [ values, handleInputChange, actualizarPassword, reset ] = useForm({
+    const [ values, handleInputChange ] = useForm({
         email: '',
     })
 
@@ -34,7 +33,7 @@ function Login() {
     const {email} = values;
 
     
-    const {passwordP, showPassword} = valuesP;
+    const {passwordP} = valuesP;
 
     const handleChange = (prop) => (event) => {
         setValuesP({ ...valuesP, [prop]: event.target.value });     

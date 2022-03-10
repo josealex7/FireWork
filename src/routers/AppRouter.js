@@ -57,12 +57,6 @@ if(checking){
         <Route path='/ayuda' element={<Ayuda />} />
 
         <Route path='/busqueda' element={<Busquedas />} />
-        
-        {/* <Route path="/" element={
-                    <PublicRoute isAuthenticated={isLoggedIn}>
-                        <Loading />
-                    </PublicRoute>
-                } /> */}
 
         <Route path="/homeuno" element={
                     <PublicRoute isAuthenticated={isLoggedIn}>

@@ -27,7 +27,7 @@ const UltimosAgregados = () => {
         let newArray = projects.filter((element=>element.titleproject===id))
         newArray = newArray[0]
         projects.forEach(element => {
-            if(element.titleproject[0]==newArray.titleproject[0] && element.titleproject!==newArray.titleproject){
+            if(element.titleproject[0]===newArray.titleproject[0] && element.titleproject!==newArray.titleproject){
                 if(contador<4 ){
                     arrayNew.push(
                         element

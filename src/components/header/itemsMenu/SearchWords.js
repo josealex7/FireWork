@@ -5,7 +5,6 @@ import { useFormik } from 'formik';
 import * as Yup from 'yup';
 import { searchProjectAsync } from '../../../actions/actionProyectos';
 import { searchServiceAsync } from '../../../actions/actionServices';
-import { FaSearch } from "react-icons/fa";
 import './UserPerfil.css';
 
 import SearchIcon from '@mui/icons-material/Search';

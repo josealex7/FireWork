@@ -34,9 +34,9 @@ export const Registro = () => {
         showPassword: false,
       });
 
-    const { nombre, email, pass1, pass2 } = formValues;
+    const { nombre, email } = formValues;
 
-    const {passwordP1, passwordP2, showPassword} = valuesP;
+    const {passwordP1} = valuesP;
 
     const handleChange = (prop) => (event) => {
         setValuesP({ ...valuesP, [prop]: event.target.value });     

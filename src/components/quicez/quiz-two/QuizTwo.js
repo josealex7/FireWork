@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import questions from './questionsTwo';
 import '../quiz-one/stylesQuizOne.css';
 import { enviarTestAsync } from '../../../actions/actionTest'
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import User from "../../../hooks/User";
 
 const QuizTwo = () => {

@@ -1,5 +1,5 @@
-import React, { useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import React from 'react';
+import { useSelector } from 'react-redux';
 //import { listServiceAsync } from '../../actions/actionServices';
 import { Link } from "react-router-dom";
 import { FaArrowLeft, FaHeart } from "react-icons/fa";
@@ -7,14 +7,8 @@ import './styleslistarAll.css';
 
 const ListMyServices = () => {
 
-    const dispatch = useDispatch();
-
     const { services } = useSelector((store) => store.services);
     console.log(services);
-
-    useEffect(() => {
-        //dispatch(listServiceAsync());
-    }, []);
 
     return (
         <div className='first-container-all'>
