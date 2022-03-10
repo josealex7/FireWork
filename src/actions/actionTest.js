@@ -1,6 +1,6 @@
 import { types_Test } from "../types/types";
 import { db } from "../firebase/firebaseConfig";
-import { addDoc,collection,getDocs,query,where,doc,deleteDoc, updateDoc} from "@firebase/firestore";
+import { addDoc,collection,getDocs } from "@firebase/firestore";
 import User from '../hooks/User';
 
 
@@ -30,14 +30,14 @@ export const obtenerAsync = () => {
         const querySnapshot = await getDocs(collection(db, "test"));
         const productos = [];
         querySnapshot.forEach((doc) => {
-            if(doc.data().id_user==useUser.uid){
+            if(doc.data().id_user===useUser.uid){
                 productos.push({
                     ...doc.data()
                 })
             }            
         });
         console.log(productos)
-        if(productos.length==0){
+        if(productos.length===0){
             dispatch(obtenerSync(undefined));
         } else {
             dispatch(obtenerSync(productos));

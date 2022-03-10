@@ -4,7 +4,7 @@ const initialState = {
     datosUsuario: {}
 }
 
-export const usuarioReducer = (state = {}, action) => {
+export const usuarioReducer = (state = initialState, action) => {
     switch (action.type) {
         case types_Usuario.obtener:
 

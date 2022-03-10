@@ -2,9 +2,7 @@ import React from 'react';
 import { Link } from "react-router-dom";
 import { FaArrowLeft } from "react-icons/fa";
 import '../components/quicez/stylesQuicez.css';
-import { useSelector, useDispatch } from "react-redux";
-import { obtenerAsync } from '../actions/actionTest';
-import { Typography } from '@mui/material';
+import { useSelector } from "react-redux";
 
 const Test = () => {
 
@@ -25,12 +23,12 @@ const Test = () => {
             </Link>
             <div>
             {
-                test != undefined?
+                test !== undefined?
                 <div className="container-cards">
             {
                 test.map((testIndividual =>(
                     
-                        testIndividual.nombre_prueba=='html'?
+                        testIndividual.nombre_prueba==='html'?
                         
                         <div className="cards-test-one">
                         <div className="white-capa-test">
@@ -69,7 +67,7 @@ const Test = () => {
             }       
             {
                 test.map((testIndividual =>(
-                    testIndividual.nombre_prueba=='javascript'?
+                    testIndividual.nombre_prueba==='javascript'?
                     <div className="cards-test-two">
                         <div className="white-capa-test">
                             <h3 className="title-card-test">Prueba de JavaScript</h3>

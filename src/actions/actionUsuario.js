@@ -1,6 +1,6 @@
 import { types_Usuario } from "../types/types";
 import { db } from "../firebase/firebaseConfig";
-import { addDoc,collection,getDocs,query,where,doc,deleteDoc, updateDoc} from "@firebase/firestore";
+import { addDoc,collection,getDocs,doc, updateDoc} from "@firebase/firestore";
 import User from '../hooks/User';
 
 
@@ -32,7 +32,7 @@ export const ListarUsuarioAsync = () => {
         const querySnapshot = await getDocs(collection(db, "usuario"));
         let bandera = true;
         querySnapshot.forEach((doc) => {
-            if(doc.data().id==useUser.uid){
+            if(doc.data().id===useUser.uid){
                 let data = doc.data()
                 data['id_coleccion']=doc.id
                 dispatch(ListarUsuarioSync(data));

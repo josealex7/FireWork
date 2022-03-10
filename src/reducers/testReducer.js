@@ -4,7 +4,7 @@ const initialState = {
     test: []
 }
 
-export const testReducer = (state = {}, action) => {
+export const testReducer = (state = initialState, action) => {
     switch (action.type) {
         case types_Test.obtener:
             return{

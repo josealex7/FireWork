@@ -63,7 +63,6 @@ const Contactar = () => {
               label="Escribe tu mensaje"
               multiline
               rows={4}
-              fullWidth
               />
               <Button fullWidth sx={{mt:2, mb:4}} type="submit" variant='contained' className='botonEnviar'>
                   Enviar
