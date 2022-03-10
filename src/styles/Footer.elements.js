@@ -13,7 +13,7 @@ export const ContainerPrincipal = styled.footer`
     width: 100%;
     height: auto;
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
     flex-direction: column;
     align-items: center;
     margin-top: 50px;

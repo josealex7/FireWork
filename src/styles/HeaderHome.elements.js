@@ -17,7 +17,7 @@ export const FirstContainer = styled.section`
 export const ContainerLogoImg = styled.div`
     display: flex;
     justify-content: center;
-    align-items: start;
+    align-items: flex-start;
     margin-top: -200px;
 `
 

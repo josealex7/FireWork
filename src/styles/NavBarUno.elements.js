@@ -29,8 +29,8 @@ export const ImgLogo = styled.img`
 export const ContainerSearch = styled.div`
   margin-left: 200px;
   display: flex;
-  align-items: start;
-  justify-content: start;
+  align-items: flex-start;
+  justify-content: flex-start;
   color: #fff;
   width: 250px;
   @media screen and (max-width: 1193px) {

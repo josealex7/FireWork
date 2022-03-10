@@ -5,7 +5,7 @@ export const ContainerPrincipal = styled.div`
   background-color: #fff;
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
   margin: 20px 40px 170px 40px;
 `
@@ -15,11 +15,8 @@ export const ContainerUno = styled.div`
   height: auto;
   display: flex;
   flex-direction: row;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
-  @media screen and (max-width: 640px) {
-    margin-bottom: 10px;
-  }
 `
 
 export const BtnBack = styled.button`
